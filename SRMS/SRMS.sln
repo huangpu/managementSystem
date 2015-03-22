@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRMS", "SRMS\SRMS.csproj", "{458EF3CD-8634-4A72-92AE-33D495C729F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRMSBLL", "SRMSBLL\SRMSBLL.csproj", "{35701C53-E7FB-496C-8BCC-A7F53B77785B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRMSDAL", "SRMSDAL\SRMSDAL.csproj", "{6477FF7B-7229-4C8C-877A-E07E7CCFF2DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{458EF3CD-8634-4A72-92AE-33D495C729F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{458EF3CD-8634-4A72-92AE-33D495C729F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{458EF3CD-8634-4A72-92AE-33D495C729F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{458EF3CD-8634-4A72-92AE-33D495C729F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35701C53-E7FB-496C-8BCC-A7F53B77785B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35701C53-E7FB-496C-8BCC-A7F53B77785B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35701C53-E7FB-496C-8BCC-A7F53B77785B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35701C53-E7FB-496C-8BCC-A7F53B77785B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6477FF7B-7229-4C8C-877A-E07E7CCFF2DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6477FF7B-7229-4C8C-877A-E07E7CCFF2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6477FF7B-7229-4C8C-877A-E07E7CCFF2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6477FF7B-7229-4C8C-877A-E07E7CCFF2DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

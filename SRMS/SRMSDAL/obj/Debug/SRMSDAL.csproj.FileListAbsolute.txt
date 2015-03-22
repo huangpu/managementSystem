@@ -1,0 +1,5 @@
+D:\C#数据库\毕业设计\SRMS\SRMSDAL\bin\Debug\SRMSDAL.dll
+D:\C#数据库\毕业设计\SRMS\SRMSDAL\bin\Debug\SRMSDAL.pdb
+D:\C#数据库\毕业设计\SRMS\SRMSDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\C#数据库\毕业设计\SRMS\SRMSDAL\obj\Debug\SRMSDAL.dll
+D:\C#数据库\毕业设计\SRMS\SRMSDAL\obj\Debug\SRMSDAL.pdb
