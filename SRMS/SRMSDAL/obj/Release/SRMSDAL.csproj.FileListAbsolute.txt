@@ -1,0 +1,5 @@
+D:\C#Database\biyesheji\SRMS\SRMSDAL\bin\Release\SRMSDAL.dll
+D:\C#Database\biyesheji\SRMS\SRMSDAL\bin\Release\SRMSDAL.pdb
+D:\C#Database\biyesheji\SRMS\SRMSDAL\obj\Release\ResolveAssemblyReference.cache
+D:\C#Database\biyesheji\SRMS\SRMSDAL\obj\Release\SRMSDAL.dll
+D:\C#Database\biyesheji\SRMS\SRMSDAL\obj\Release\SRMSDAL.pdb

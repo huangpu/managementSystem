@@ -1,0 +1,7 @@
+D:\C#Database\biyesheji\SRMS\SRMSBLL\bin\Release\SRMSBLL.dll
+D:\C#Database\biyesheji\SRMS\SRMSBLL\bin\Release\SRMSBLL.pdb
+D:\C#Database\biyesheji\SRMS\SRMSBLL\bin\Release\SRMSDAL.dll
+D:\C#Database\biyesheji\SRMS\SRMSBLL\bin\Release\SRMSDAL.pdb
+D:\C#Database\biyesheji\SRMS\SRMSBLL\obj\Release\ResolveAssemblyReference.cache
+D:\C#Database\biyesheji\SRMS\SRMSBLL\obj\Release\SRMSBLL.dll
+D:\C#Database\biyesheji\SRMS\SRMSBLL\obj\Release\SRMSBLL.pdb
