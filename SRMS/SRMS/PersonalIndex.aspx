@@ -35,9 +35,12 @@
 							<asp:Repeater ID="Repeater1" runat="server">
                                   <ItemTemplate>  
                                    <tr>
-								<td class="style1">20150329001</td>
-								<td class="style1">学校科研项目管理系统</td>
-								<td class="style1">2015/3/29</td>
+								<td class="style1">
+                                    <asp:Label ID="newsID" runat="server" Text="Label"></asp:Label></td>
+								<td class="style1">
+                                    <asp:Label ID="newsTitle" runat="server" Text="Label"></asp:Label></td>
+								<td class="style1">
+                                    <asp:Label ID="newsTime" runat="server" Text="Label"></asp:Label></td>
 								<td class="style1">
 									<span class="label label-success">详细内容</span>
 								</td>
@@ -54,24 +57,15 @@
                         </tr>
                    </FooterTemplate>
                              </asp:Repeater>
-						    <tr>
-								<td class="style1"  colspan="5"></td>
-								
-							</tr>
-                           
-
-							
 							
 						  </tbody>
 					  </table> 
-                     
-                        <webdiyer:AspNetPager ID="AspNetPager1" runat="server" AlwaysShow="True" 
-                 CustomInfoHTML="" CustomInfoSectionWidth="" FirstPageText="首页" 
+                        <webdiyer:AspNetPager ID="AspNetPager1" runat="server" 
+                           CustomInfoHTML="" CustomInfoSectionWidth="" FirstPageText="首页" 
                  HorizontalAlign="Right" LastPageText="尾页" LayoutType="Table" NextPageText="下一页" 
                  PrevPageText="上一页" ShowCustomInfoSection="Left" 
-                 PageSize="5" onpagechanging="AspNetPager1_PageChanging" 
-                            onpagechanged="AspNetPager1_PageChanged">
-            </webdiyer:AspNetPager>
+                 PageSize="5">
+                        </webdiyer:AspNetPager>
 					</div>
 				</div><!--/span-->
 			

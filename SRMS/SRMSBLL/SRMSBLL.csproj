@@ -46,12 +46,14 @@
     <Compile Include="DataAccess.cs" />
     <Compile Include="bean\InstituteDataBean.cs" />
     <Compile Include="bean\InterimReportBean.cs" />
-    <Compile Include="IUser.cs" />
+    <Compile Include="Interface\INews.cs" />
+    <Compile Include="Interface\IUser.cs" />
     <Compile Include="bean\NewsBean.cs" />
     <Compile Include="bean\ProjectEndBean.cs" />
     <Compile Include="bean\ProjectSubmitBean.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="bean\ResultBean.cs" />
+    <Compile Include="SqlNews.cs" />
     <Compile Include="SqlUser.cs" />
     <Compile Include="bean\UserBean.cs" />
     <Compile Include="bean\UserMoneyBean.cs" />

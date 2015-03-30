@@ -109,5 +109,41 @@ namespace SRMSDAL
                 return null;
             }
         }
+
+         public  DataTable Pager(string tablename, string orderkey, string conditionStr, int pageIndex, int pageSize,
+                      out int count)
+        {
+            DataTable dt = new DataTable();
+            //构造存储过程page的参数
+            count = 0;
+            SqlParameter[] paras = new SqlParameter[]{
+           new SqlParameter("@table",tablename),
+           new SqlParameter("@pageIndex",pageIndex),
+           new SqlParameter("@pageSize",pageSize),
+           new SqlParameter("@conditionStr",conditionStr),
+           new SqlParameter("@orderProperty",orderkey),
+           new SqlParameter("@totalcount",count),
+        };
+            paras[5].Direction = ParameterDirection.Output;   //指定count为输出类型
+
+            this.Open();
+            SqlCommand cmd = new SqlCommand("Seacher_News", Conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddRange(paras);
+
+            SqlDataReader sdr;
+            using (sdr = cmd.ExecuteReader(CommandBehavior.CloseConnection))
+            {
+                dt.Load(sdr);
+            }
+            count = Convert.ToInt32(paras[5].Value);
+
+            return dt;
+        }
+
+
+
+        
     }
+    
 }

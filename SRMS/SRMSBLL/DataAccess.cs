@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Reflection;
 using System.Configuration;
+using SRMSBLL.Interface;
 
 namespace SRMSBLL
 {
-    public  class DataAccess
+    public static class DataAccess
     {
         private static readonly string assemblyName = "SRMSBLL";
         private static readonly string db = "Sql";
@@ -16,6 +17,13 @@ namespace SRMSBLL
         {
             string className = assemblyName + "." + db + "User";
             return (IUser)Assembly.Load(assemblyName).CreateInstance(className);
+        }
+
+
+        public static INews Createnews()
+        {
+            string className = assemblyName + "." + db + "News";
+            return (INews)Assembly.Load(assemblyName).CreateInstance(className);
         }
     }
 }
