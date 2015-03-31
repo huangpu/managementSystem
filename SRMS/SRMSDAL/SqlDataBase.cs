@@ -110,7 +110,7 @@ namespace SRMSDAL
             }
         }
 
-         public  DataTable Pager(string tablename, string orderkey, string conditionStr, int pageIndex, int pageSize,
+        public DataTable Pager(string tablename, string strcondition, string orderkey,string strorder, int pageIndex, int pageSize,
                       out int count)
         {
             DataTable dt = new DataTable();
@@ -118,13 +118,16 @@ namespace SRMSDAL
             count = 0;
             SqlParameter[] paras = new SqlParameter[]{
            new SqlParameter("@table",tablename),
+           new SqlParameter("@strcondition",strcondition),
+           new SqlParameter("@orderkey",orderkey),
+           new SqlParameter("@strorder",strorder),
            new SqlParameter("@pageIndex",pageIndex),
            new SqlParameter("@pageSize",pageSize),
-           new SqlParameter("@conditionStr",conditionStr),
-           new SqlParameter("@orderProperty",orderkey),
+      
+           
            new SqlParameter("@totalcount",count),
         };
-            paras[5].Direction = ParameterDirection.Output;   //指定count为输出类型
+            paras[6].Direction = ParameterDirection.Output;   //指定count为输出类型
 
             this.Open();
             SqlCommand cmd = new SqlCommand("Seacher_News", Conn);
@@ -136,7 +139,7 @@ namespace SRMSDAL
             {
                 dt.Load(sdr);
             }
-            count = Convert.ToInt32(paras[5].Value);
+            count = Convert.ToInt32(paras[6].Value);
 
             return dt;
         }

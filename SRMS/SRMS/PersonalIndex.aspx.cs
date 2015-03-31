@@ -25,9 +25,15 @@ namespace SRMS
         {
             INews news = DataAccess.Createnews();
             int count ;
-            Repeater1.DataSource = news.Pager("tbl_NewsBulletin", "News_ID=1", "des", AspNetPager1.CurrentPageIndex, AspNetPager1.PageSize, out count);
+            Repeater1.DataSource = news.Pager("tbl_NewsBulletin", "News_ID Like '%'", "News_Time","desc", AspNetPager1.CurrentPageIndex, AspNetPager1.PageSize, out count);
             Repeater1.DataBind();
             AspNetPager1.RecordCount = count;  //这个也是必须的
+        }
+
+        protected void AspNetPager1_PageChanging(object src, Wuqi.Webdiyer.PageChangingEventArgs e)
+        {
+            AspNetPager1.CurrentPageIndex = e.NewPageIndex;   //设置当前的页码
+            GetPage();  //重新分页
         }
     }
 }

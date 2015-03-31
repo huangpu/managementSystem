@@ -16,3 +16,7 @@ D:\C#Database\biyesheji\SRMS\SRMS\bin\SRMSDAL.pdb
 D:\C#Database\biyesheji\SRMS\SRMS\obj\Debug\ResolveAssemblyReference.cache
 D:\C#Database\biyesheji\SRMS\SRMS\obj\Debug\SRMS.dll
 D:\C#Database\biyesheji\SRMS\SRMS\obj\Debug\SRMS.pdb
+D:\C#Database\biyesheji\SRMS\SRMS\bin\AspNetPager.resources.dll
+D:\C#Database\biyesheji\SRMS\SRMS\bin\AspNetPager.xml
+D:\C#Database\biyesheji\SRMS\SRMS\bin\en\AspNetPager.resources.dll
+D:\C#Database\biyesheji\SRMS\SRMS\bin\zh-CHT\AspNetPager.resources.dll

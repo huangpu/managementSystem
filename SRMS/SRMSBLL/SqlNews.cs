@@ -16,11 +16,11 @@ namespace SRMSBLL
         {
             db = new SqlDataBase();
         }
-        public  DataTable Pager(string tablename, string orderkey, string conditionStr, int pageIndex, int pageSize,
-                     out int count)
+        public DataTable Pager(string tablename, string strcondition, string orderkey, string strorder, int pageIndex, int pageSize,
+                      out int count)
         {
             DataTable dt = new DataTable();
-            dt = db.Pager(tablename, orderkey, conditionStr, pageIndex, pageSize, out count);
+            dt = db.Pager(tablename, strcondition, orderkey, strorder, pageIndex, pageSize, out count);
             return dt;
         }
     }
