@@ -129,6 +129,7 @@
     <Content Include="Login.aspx" />
     <Content Include="NewsDetail.aspx" />
     <Content Include="PersonalIndex.aspx" />
+    <Content Include="PersonalInfor.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -167,6 +168,13 @@
     </Compile>
     <Compile Include="PersonalIndex.aspx.designer.cs">
       <DependentUpon>PersonalIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalInfor.aspx.cs">
+      <DependentUpon>PersonalInfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalInfor.aspx.designer.cs">
+      <DependentUpon>PersonalInfor.aspx</DependentUpon>
     </Compile>
     <Compile Include="PersonalRoot.Master.cs">
       <DependentUpon>PersonalRoot.Master</DependentUpon>
