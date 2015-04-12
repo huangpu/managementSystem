@@ -25,7 +25,7 @@ namespace SRMS
         {
             INews news = DataAccess.Createnews();
             int count ;
-            Repeater1.DataSource = news.Pager("tbl_NewsBulletin", "News_ID Like '%'", "News_Time","desc", AspNetPager1.CurrentPageIndex, AspNetPager1.PageSize, out count);
+            Repeater1.DataSource = news.pager("tbl_NewsBulletin", "News_ID Like '%'", "News_Time","desc", AspNetPager1.CurrentPageIndex, AspNetPager1.PageSize, out count);
             Repeater1.DataBind();
             AspNetPager1.RecordCount = count;  //这个也是必须的
         }

@@ -8,7 +8,7 @@ using System.Configuration;
 
 namespace SRMSDAL
 {
-    public class SqlDataBase
+    public  class SqlDataBase
     {
         //连接字符串字段
         private string connstring;
@@ -86,7 +86,7 @@ namespace SRMSDAL
             return count;
         }
         //执行选择查询并得到数据集
-        public DataSet GetDataSet(string sqlString)
+        public  DataSet GetDataSet(string sqlString)
         {
             this.Open();
             SqlDataAdapter sda = new SqlDataAdapter(sqlString,Conn);
@@ -110,7 +110,7 @@ namespace SRMSDAL
             }
         }
 
-        public DataTable Pager(string tablename, string strcondition, string orderkey,string strorder, int pageIndex, int pageSize,
+        public  DataTable Pager(string tablename, string strcondition, string orderkey, string strorder, int pageIndex, int pageSize,
                       out int count)
         {
             DataTable dt = new DataTable();

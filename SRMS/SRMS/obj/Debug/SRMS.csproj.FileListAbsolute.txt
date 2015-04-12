@@ -20,3 +20,4 @@ D:\C#Database\biyesheji\SRMS\SRMS\bin\AspNetPager.resources.dll
 D:\C#Database\biyesheji\SRMS\SRMS\bin\AspNetPager.xml
 D:\C#Database\biyesheji\SRMS\SRMS\bin\en\AspNetPager.resources.dll
 D:\C#Database\biyesheji\SRMS\SRMS\bin\zh-CHT\AspNetPager.resources.dll
+D:\C#Database\biyesheji\SRMS\SRMS\bin\CKEditor.NET.pdb

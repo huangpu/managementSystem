@@ -38,6 +38,9 @@
     <Reference Include="AspNetPager.resources">
       <HintPath>..\..\..\..\Program Files\AspNetPager745DLL\zh-CHT\AspNetPager.resources.dll</HintPath>
     </Reference>
+    <Reference Include="CKEditor.NET, Version=3.6.6.2, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -56,6 +59,7 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminIndex.aspx" />
     <Content Include="css2\bootstrap-responsive.css" />
     <Content Include="css2\bootstrap-responsive.min.css" />
     <Content Include="css2\bootstrap.css" />
@@ -95,6 +99,90 @@
     <Content Include="images\resetbtn.jpg" />
     <Content Include="images\shad2.png" />
     <Content Include="images\tasks.html" />
+    <Content Include="img\arrows-active.png" />
+    <Content Include="img\arrows-normal.png" />
+    <Content Include="img\avatar.jpg" />
+    <Content Include="img\bg-input-focus.png" />
+    <Content Include="img\bg-input.png" />
+    <Content Include="img\bg-login.jpg" />
+    <Content Include="img\browser-chrome-big.png" />
+    <Content Include="img\browser-firefox-big.png" />
+    <Content Include="img\browser-ie.png" />
+    <Content Include="img\browser-opera.png" />
+    <Content Include="img\browser-safari.png" />
+    <Content Include="img\buttons.gif" />
+    <Content Include="img\chat-left%402x.png" />
+    <Content Include="img\chat-left-metro%402x.png" />
+    <Content Include="img\chat-left-metro.png" />
+    <Content Include="img\chat-left.png" />
+    <Content Include="img\chat-right%402x.png" />
+    <Content Include="img\chat-right-metro%402x.png" />
+    <Content Include="img\chat-right-metro.png" />
+    <Content Include="img\chat-right.png" />
+    <Content Include="img\chosen-sprite.png" />
+    <Content Include="img\close-button-white.png" />
+    <Content Include="img\close-button.png" />
+    <Content Include="img\crop.gif" />
+    <Content Include="img\dialogs.png" />
+    <Content Include="img\gallery\photo1.jpg" />
+    <Content Include="img\gallery\photo10.jpg" />
+    <Content Include="img\gallery\photo11.jpg" />
+    <Content Include="img\gallery\photo12.jpg" />
+    <Content Include="img\gallery\photo13.jpg" />
+    <Content Include="img\gallery\photo2.jpg" />
+    <Content Include="img\gallery\photo3.jpg" />
+    <Content Include="img\gallery\photo4.jpg" />
+    <Content Include="img\gallery\photo5.jpg" />
+    <Content Include="img\gallery\photo6.jpg" />
+    <Content Include="img\gallery\photo7.jpg" />
+    <Content Include="img\gallery\photo8.jpg" />
+    <Content Include="img\gallery\photo9.jpg" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\glyphicons-white.png" />
+    <Content Include="img\glyphicons-white.svg" />
+    <Content Include="img\glyphicons.png" />
+    <Content Include="img\glyphicons.svg" />
+    <Content Include="img\glyphicons_halflings-white.png" />
+    <Content Include="img\glyphicons_halflings-white.svg" />
+    <Content Include="img\glyphicons_halflings.png" />
+    <Content Include="img\glyphicons_halflings.svg" />
+    <Content Include="img\icons-big.png" />
+    <Content Include="img\icons-small.png" />
+    <Content Include="img\iphone-style-checkboxes\off-63584.png" />
+    <Content Include="img\iphone-style-checkboxes\on-63584.png" />
+    <Content Include="img\iphone-style-checkboxes\slider_center-63584.png" />
+    <Content Include="img\iphone-style-checkboxes\slider_left-63584.png" />
+    <Content Include="img\iphone-style-checkboxes\slider_right-63584.png" />
+    <Content Include="img\progress.gif" />
+    <Content Include="img\quicklook-bg.png" />
+    <Content Include="img\quicklook-icons.png" />
+    <Content Include="img\quote.png" />
+    <Content Include="img\resize.png" />
+    <Content Include="img\slider_r8.png" />
+    <Content Include="img\spinner-mini.gif" />
+    <Content Include="img\sprite.png" />
+    <Content Include="img\timeline-bg.png" />
+    <Content Include="img\timeline-left-arrow%402x.png" />
+    <Content Include="img\timeline-left-arrow.png" />
+    <Content Include="img\timeline-right-arrow%402x.png" />
+    <Content Include="img\timeline-right-arrow.png" />
+    <Content Include="img\toolbar.gif" />
+    <Content Include="img\toolbar.png" />
+    <Content Include="img\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="img\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="img\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="img\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="img\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="img\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="img\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="img\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="img\ui-icons_222222_256x240.png" />
+    <Content Include="img\ui-icons_2e83ff_256x240.png" />
+    <Content Include="img\ui-icons_454545_256x240.png" />
+    <Content Include="img\ui-icons_888888_256x240.png" />
+    <Content Include="img\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="img\uploadify-cancel.png" />
     <Content Include="js2\bootstrap.js" />
     <Content Include="js2\bootstrap.min.js" />
     <Content Include="js2\counter.js" />
@@ -130,6 +218,9 @@
     <Content Include="NewsDetail.aspx" />
     <Content Include="PersonalIndex.aspx" />
     <Content Include="PersonalInfor.aspx" />
+    <Content Include="PersonalPrj.aspx" />
+    <Content Include="PersonalResult.aspx" />
+    <Content Include="PersonalSubmit.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -145,6 +236,20 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminIndex.aspx.cs">
+      <DependentUpon>AdminIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminIndex.aspx.designer.cs">
+      <DependentUpon>AdminIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRoot.Master.cs">
+      <DependentUpon>AdminRoot.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminRoot.Master.designer.cs">
+      <DependentUpon>AdminRoot.Master</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -176,12 +281,33 @@
     <Compile Include="PersonalInfor.aspx.designer.cs">
       <DependentUpon>PersonalInfor.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PersonalPrj.aspx.cs">
+      <DependentUpon>PersonalPrj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalPrj.aspx.designer.cs">
+      <DependentUpon>PersonalPrj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalResult.aspx.cs">
+      <DependentUpon>PersonalResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalResult.aspx.designer.cs">
+      <DependentUpon>PersonalResult.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PersonalRoot.Master.cs">
       <DependentUpon>PersonalRoot.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PersonalRoot.Master.designer.cs">
       <DependentUpon>PersonalRoot.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalSubmit.aspx.cs">
+      <DependentUpon>PersonalSubmit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalSubmit.aspx.designer.cs">
+      <DependentUpon>PersonalSubmit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebForm1.aspx.cs">
@@ -203,6 +329,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminRoot.Master" />
     <None Include="font\fontawesome-webfont-0.eot" />
     <None Include="font\fontawesome-webfont-62877.eot" />
     <None Include="font\fontawesome-webfont-62877.ttf" />

@@ -96,7 +96,7 @@
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li><a href="PersonalIndex.aspx"><i class="icon-bar-chart"></i><span class="hidden-tablet"> 项目公告</span></a></li>	
 						<li></li>
-						<li><a href="tasks.html"><i class="icon-tasks"></i><span class="hidden-tablet"> 个人资料</span></a></li>
+						<li><a href="PersonalInfor.aspx"><i class="icon-tasks"></i><span class="hidden-tablet"> 个人资料</span></a></li>
 						<li><a href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet"> 在研项目</span></a></li>
 						<li><a href="file-manager.html"><i class="icon-folder-open"></i><span class="hidden-tablet"> 我的成果</span></a></li>
 						<li></li>

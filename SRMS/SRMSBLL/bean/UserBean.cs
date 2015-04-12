@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SRMSBLL
 {
-    class UserBean
+    public class UserBean
     {
         private string userID;
         private string userName;
