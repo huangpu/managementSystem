@@ -3,11 +3,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    
-	<!-- start: Meta -->
+<head id="Head1" runat="server">
+    	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>Bootstrap Metro Dashboard by Dennis Ji for ARM demo</title>
+	<title>学校科研项目管理系统</title>
 	<meta name="description" content="Bootstrap Metro Dashboard">
 	<meta name="author" content="Dennis Ji">
 	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
@@ -18,31 +17,33 @@
 	<!-- end: Mobile Specific -->
 	
 	<!-- start: CSS -->
-	<link  href="css2/bootstrap.min.css" rel="stylesheet">
-	<link href="css2/bootstrap-responsive.min.css" rel="stylesheet">
-	<link  href="css2/style.css" rel="stylesheet">
-	<link  href="css2/style-responsive.css" rel="stylesheet">
+	<link  href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link  href="css/style.css" rel="stylesheet">
+	<link  href="css/style-responsive.css" rel="stylesheet">
 	<!-- end: CSS -->
-	
+
 
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<link  href="css2/ie.css" rel="stylesheet">
+		<link  href="css/ie.css" rel="stylesheet">
 	<![endif]-->
 	
 	<!--[if IE 9]>
-		<link  href="css2/ie9.css" rel="stylesheet">
+		<link  href="css/ie9.css" rel="stylesheet">
 	<![endif]-->
 		
 	<!-- start: Favicon -->
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<!-- end: Favicon -->
-	
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-   	<!-- start: Header -->
+    <!-- start: Header -->
 	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container-fluid">
@@ -51,7 +52,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"><span>Metro</span></a>
+				<a class="brand" href="index.html"><span>Menu</span></a>
 								
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
@@ -66,7 +67,7 @@
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i ><img src="images/people.png" width="24dp" height="20dp"/> </i> 黄埔
+								<i ><img src="images/people.png" width="24dp" height="20dp"/> </i> 张三
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
@@ -90,21 +91,7 @@
 		<div class="container-fluid-full">
 		<div class="row-fluid">
 				
-			<!-- start: Main Menu -->
-			<div id="sidebar-left" class="span2">
-				<div class="nav-collapse sidebar-nav">
-					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-tablet"> 项目公告</span></a></li>	
-						<li></li>
-						<li><a href="tasks.html"><i class="icon-tasks"></i><span class="hidden-tablet"> 个人资料</span></a></li>
-						<li><a href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet"> 在研项目</span></a></li>
-						<li><a href="file-manager.html"><i class="icon-folder-open"></i><span class="hidden-tablet"> 我的成果</span></a></li>
-						<li></li>
-						<li><a href="login.html"><i class="icon-lock"></i><span class="hidden-tablet"> 退出登录</span></a></li>
-					</ul>
-				</div>
-			</div>
-			<!-- end: Main Menu -->
+		
 			
 			<noscript>
 				<div class="alert alert-block span10">
@@ -123,12 +110,18 @@
 					<a href="index.html">主页</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">项目公告</a></li>
-				
+				<li>
+			    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                </asp:ContentPlaceHolder>
+                </li>
+						
 				
 			</ul>
 
-			<div class="row-fluid"></div>		
+			<div class="row-fluid">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                </div>		
 
 			<div class="row-fluid"></div>
 			
@@ -141,56 +134,7 @@
 						
 			<div class="row-fluid"><!--/span--></div>
 			<div class="row-fluid">
-			  <div class="clearfix"><<div class="row-fluid sortable">
-				<div class="box span12">
-					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon edit"></i><span class="break"></span>Form Elements</h2>
-						<div class="box-icon">
-							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
-							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
-							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
-						</div>
-					</div>
-					<div class="box-content">
-						<form class="form-horizontal">
-						  <fieldset>
-							<div class="control-group">
-							  <label class="control-label" for="typeahead">Auto complete </label>
-							  <div class="controls">
-								<input type="text" class="span6 typeahead" id="typeahead"  data-provide="typeahead" data-items="4" data-source='["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]'>
-								<p class="help-block">Start typing to activate auto complete!</p>
-							  </div>
-							</div>
-							<div class="control-group">
-							  <label class="control-label" for="date01">Date input</label>
-							  <div class="controls">
-								<input type="text" class="input-xlarge datepicker" id="date01" value="02/16/12">
-							  </div>
-							</div>
-
-							<div class="control-group">
-							  <label class="control-label" for="fileInput">File input</label>
-							  <div class="controls">
-								<input class="input-file uniform_on" id="fileInput" type="file">
-							  </div>
-							</div>          
-							<div class="control-group hidden-phone">
-							  <label class="control-label" for="textarea2">Textarea WYSIWYG</label>
-							  <div class="controls">
-								<textarea class="cleditor" id="textarea2" rows="3"></textarea>
-							  </div>
-							</div>
-							<div class="form-actions">
-							  <button type="submit" class="btn btn-primary">Save changes</button>
-							  <button type="reset" class="btn">Cancel</button>
-							</div>
-						  </fieldset>
-						</form>   
-
-					</div>
-				</div><!--/span-->
-
-			</div><!--/row--></div>
+			  <div class="clearfix"></div>
 								
 			</div><!--/row-->
 			
@@ -229,61 +173,62 @@
 	
 	<!-- start: JavaScript-->
 
-		<script src="js2/jquery-1.9.1.min.js"></script>
-	<script src="js2/jquery-migrate-1.0.0.min.js"></script>
+		<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery-migrate-1.0.0.min.js"></script>
 	
-		<script src="js2/jquery-ui-1.10.0.custom.min.js"></script>
+		<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
 	
-		<script src="js2/jquery.ui.touch-punch.js"></script>
+		<script src="js/jquery.ui.touch-punch.js"></script>
 	
-		<script src="js2/modernizr.js"></script>
+		<script src="js/modernizr.js"></script>
 	
-		<script src="js2/bootstrap.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 	
-		<script src="js2/jquery.cookie.js"></script>
+		<script src="js/jquery.cookie.js"></script>
 	
-		<script src='js2/fullcalendar.min.js'></script>
+		<script src="js/fullcalendar.min.js"></script>
 	
-		<script src='js2/jquery.dataTables.min.js'></script>
+		<script src="js/jquery.dataTables.min.js"></script>
 
-		<script src="js2/excanvas.js"></script>
-	<script src="js2/jquery.flot.js"></script>
-	<script src="js2/jquery.flot.pie.js"></script>
-	<script src="js2/jquery.flot.stack.js"></script>
-	<script src="js2/jquery.flot.resize.min.js"></script>
+		<script src="js/excanvas.js"></script>
+	<script src="js/jquery.flot.js"></script>
+	<script src="js/jquery.flot.pie.js"></script>
+	<script src="js/jquery.flot.stack.js"></script>
+	<script src="js/jquery.flot.resize.min.js"></script>
 	
-		<script src="js2/jquery.chosen.min.js"></script>
+		<script src="js/jquery.chosen.min.js"></script>
 	
-		<script src="js2/jquery.uniform.min.js"></script>
+		<script src="js/jquery.uniform.min.js"></script>
 		
-		<script src="js2/jquery.cleditor.min.js"></script>
+		<script src="js/jquery.cleditor.min.js"></script>
 	
-		<script src="js2/jquery.noty.js"></script>
+		<script src="js/jquery.noty.js"></script>
 	
-		<script src="js2/jquery.elfinder.min.js"></script>
+		<script src="js/jquery.elfinder.min.js"></script>
 	
-		<script src="js2/jquery.raty.min.js"></script>
+		<script src="js/jquery.raty.min.js"></script>
 	
-		<script src="js2/jquery.iphone.toggle.js"></script>
+		<script src="js/jquery.iphone.toggle.js"></script>
 	
-		<script src="js2/jquery.uploadify-3.1.min.js"></script>
+		<script src="js/jquery.uploadify-3.1.min.js"></script>
 	
-		<script src="js2/jquery.gritter.min.js"></script>
+		<script src="js/jquery.gritter.min.js"></script>
 	
-		<script src="js2/jquery.imagesloaded.js"></script>
+		<script src="js/jquery.imagesloaded.js"></script>
 	
-		<script src="js2/jquery.masonry.min.js"></script>
+		<script src="js/jquery.masonry.min.js"></script>
 	
-		<script src="js2/jquery.knob.modified.js"></script>
+		<script src="js/jquery.knob.modified.js"></script>
 	
-		<script src="js2/jquery.sparkline.min.js"></script>
+		<script src="js/jquery.sparkline.min.js"></script>
 	
-		<script src="js2/counter.js"></script>
+		<script src="js/counter.js"></script>
 	
-		<script src="js2/retina.js"></script>
+		<script src="js/retina.js"></script>
 
-		<script src="js2/custom.js"></script>
+		<script src="js/custom.js"></script>
 	<!-- end: JavaScript-->
     </form>
 </body>
 </html>
+

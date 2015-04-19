@@ -23,11 +23,11 @@ namespace SRMS
             IUser user = DataAccess.Createuser();
             if (user.userCheck(userName, userPass))
             {
-                Label1.Text = "登录成功！";
+               // Label1.Text = "登录成功！";
             }
             else
             {
-                Label1.Text = "登录失败！";
+                //Label1.Text = "登录失败！";
 
             }
         }

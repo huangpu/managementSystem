@@ -60,7 +60,7 @@
                  CustomInfoHTML="每页%PageSize%条记录 总共%RecordCount%条记录 页码：%CurrentPageIndex%/%PageCount%" CustomInfoSectionWidth=""  FirstPageText="首页" 
                  HorizontalAlign="Right" LastPageText="尾页" LayoutType="Table" NextPageText="下一页" 
                  PrevPageText="上一页" ShowCustomInfoSection="Left" 
-                 PageSize="10" onpagechanging="AspNetPager1_PageChanging"
+                 PageSize="10" 
 ></webdiyer:AspNetPager>
 					</div>
 				</div><!--/span-->

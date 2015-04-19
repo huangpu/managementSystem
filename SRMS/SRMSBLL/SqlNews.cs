@@ -12,10 +12,13 @@ namespace SRMSBLL
     class SqlNews : INews
     {
         private SqlDataBase db;
+        private DataSet ds;
+        private NewsBean news;
         private string sqlString;
         public SqlNews()
         {
             db = new SqlDataBase();
+            news = new NewsBean();
         }
         public DataTable pager(string tablename, string strcondition, string orderkey, string strorder, int pageIndex, int pageSize,
                       out int count)
@@ -32,6 +35,17 @@ namespace SRMSBLL
                 return true;
             }
             return false;
+        }
+        public NewsBean getNews(string ID)
+        {
+            sqlString = "select * from tbl_NewsBulletin where News_ID='"+ID+"'";
+            ds = db.GetDataSet(sqlString);
+            news.NewsID = ds.Tables[0].Rows[0][0].ToString();
+            news.NewsName = ds.Tables[0].Rows[0][1].ToString();
+            news.NewsTime = ds.Tables[0].Rows[0][2].ToString();
+            news.NewsAuthor = ds.Tables[0].Rows[0][3].ToString();
+            news.NewsContent = ds.Tables[0].Rows[0][4].ToString();
+            return news;
         }
     }
 }

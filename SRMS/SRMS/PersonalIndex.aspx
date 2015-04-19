@@ -10,7 +10,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <a href="#">项目公告</a>
+    <a href="#">科研公告</a>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server">
@@ -20,18 +20,21 @@
    <div class="row-fluid sortable">		
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon user"></i><span class="break"></span>项目公告</h2>
-						
+						<h2><i class="halflings-icon user"></i><span class="break"></span>科研公告</h2>
+						<div class="box-icon">
+							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
+							<a href="#" class="btn-minimize"><i >h</i></a>
+							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
+						</div>
 					</div>
 					<div class="box-content">
 						<table class="table  table-bordered " align="center">
 						  <thead>
 							  <tr>
-								  <th align=center>项目编号</th>
-								  <th>项目题目</th>
+								  <th align=center>公告编号</th>
+								  <th>公告标题</th>
 								  <th>发布日期</th>
 								  <th>详细内容</th>
-								  <th>申报项目</th>
 							  </tr>
 						  </thead>   
 						  <tbody>
@@ -45,10 +48,7 @@
 								<td class="style1">
                                     <asp:Label ID="News_Time" runat="server" Text='<%# Eval("News_Time") %>'></asp:Label></td>
 								<td class="style1">
-									<span class="label label-success">详细内容</span>
-								</td>
-								<td class="style1">
-									申报
+									 <a href="PersonalNsDetail.aspx?id=<%# Eval("News_ID") %>"><span class="label label-success">详细内容</span></a>
 								</td>
 							</tr>
                             </ItemTemplate>

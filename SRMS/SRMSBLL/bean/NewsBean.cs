@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SRMSBLL
 {
-    class NewsBean
+    public class NewsBean
     {
         private string newsID;
         private string newsName;
