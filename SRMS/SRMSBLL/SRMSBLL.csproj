@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="bean\CourseDataBean.cs" />
+    <Compile Include="CreateID.cs" />
+    <Compile Include="CurrentTime.cs" />
     <Compile Include="DataAccess.cs" />
     <Compile Include="bean\InstituteDataBean.cs" />
     <Compile Include="bean\InterimReportBean.cs" />
