@@ -76,6 +76,7 @@
 				</div><!--/span-->
 			
 			</div><!--/row-->
+
               </ContentTemplate>
     </asp:UpdatePanel>
 </asp:Content>

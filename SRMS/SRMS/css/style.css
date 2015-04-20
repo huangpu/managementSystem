@@ -884,7 +884,7 @@ ul.messages li .message {
 	padding: 10px;
 	background: #fff !important;
     top: 0px;
-    left: 0px;
+    left: -34px;
 }
 
 /* Vertical Bar Chart

@@ -12,10 +12,6 @@
         {
             width: 136px;
         }
-        .style4
-        {
-            width: 143px;
-        }
         .style5
         {
         }
@@ -55,41 +51,41 @@
 							  </tr>
 						  </thead>   
 						  <tbody>
-							<tr>
-								<td class="style5">项目编号：</td>
-								<td class="style4" colspan="3">
-                                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                                </td>
-							</tr>
+							
 							<tr>
 								<td class="style5">项目名称：</td>
 								<td class="style29" colspan="3">
-                                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="Project_Name" runat="server"></asp:TextBox>
                                 </td>
 							</tr>
 							<tr>
 								<td class="style5">负责人：</td>
 								<td class="style29" colspan="3">
-                                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="Project_PersonLiable" runat="server"></asp:TextBox>
                                 </td>
 							</tr>
 							<tr>
-								<td class="style5">所属单位：</td>
+								<td class="style5">所属学院：</td>
 								<td class="style29" colspan="3">
-                                    武昌工学院</td>
+                                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                                </td>
 							</tr>
 							<tr>
 								<td class="style5">项目性质：</td>
 								<td class="style2">
                                     <asp:DropDownList ID="DropDownList1" runat="server">
-                                        <asp:ListItem>请选择</asp:ListItem>
+                                        <asp:ListItem>自然科学</asp:ListItem>
+                                        <asp:ListItem>社会科学</asp:ListItem>
                                     </asp:DropDownList>
                                 </td>
 								<td class="style3">
                                     项目类别：</td>
 								<td class="style29">
                                     <asp:DropDownList ID="DropDownList3" runat="server">
-                                        <asp:ListItem>请选择</asp:ListItem>
+                                        <asp:ListItem>一类</asp:ListItem>
+                                        <asp:ListItem>二类</asp:ListItem>
+                                        <asp:ListItem>三类</asp:ListItem>
+                                        <asp:ListItem>四类</asp:ListItem>
                                     </asp:DropDownList>
                                 </td>
 							</tr>
@@ -97,18 +93,27 @@
 								<td class="style6">校内主管部门：</td>
 								<td class="style7">
                                     科技处</td>
-								<td class="style8">是否中期检查：</td>
+								<td class="style8">所属学科：</td>
 								<td class="style1">
-                                    <asp:DropDownList ID="DropDownList8" runat="server">
+                                    <asp:DropDownList ID="DropDownList8" runat="server" 
+                                        DataSourceID="SqlDataSource1" DataTextField="Course_ID" 
+                                        DataValueField="Course_ID">
                                         <asp:ListItem>请选择</asp:ListItem>
                                     </asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                        ConnectionString="<%$ ConnectionStrings:connectionString %>" 
+                                        SelectCommand="SELECT [Course_ID] FROM [tbl_CourseData]">
+                                    </asp:SqlDataSource>
                                 </td>
 							</tr>
 							<tr>
 								<td class="style5">项目等级：</td>
 								<td class="style29" colspan="3">
                                     <asp:DropDownList ID="DropDownList5" runat="server">
-                                        <asp:ListItem>请选择</asp:ListItem>
+                                        <asp:ListItem>国家级</asp:ListItem>
+                                        <asp:ListItem>省部级</asp:ListItem>
+                                        <asp:ListItem>市厅级</asp:ListItem>
+                                        <asp:ListItem>院校级</asp:ListItem>
                                     </asp:DropDownList>
                                 </td>
 							</tr>
@@ -123,6 +128,9 @@
 								<td class="style3">项目密级：</td>
 								<td class="style26">
                                     <asp:DropDownList ID="DropDownList9" runat="server">
+                                        <asp:ListItem>秘密</asp:ListItem>
+                                        <asp:ListItem>机密</asp:ListItem>
+                                        <asp:ListItem>绝密</asp:ListItem>
                                     </asp:DropDownList>
                                 </td>
 							</tr>
@@ -146,7 +154,11 @@
 								<td class="style5">预期成果形式：</td>
 								<td class="style2" colspan="3">
                                     <asp:DropDownList ID="DropDownList10" runat="server">
-                                        <asp:ListItem>请选择</asp:ListItem>
+                                        <asp:ListItem>论文和专著</asp:ListItem>
+                                        <asp:ListItem>应用软件</asp:ListItem>
+                                        <asp:ListItem>新产品原型</asp:ListItem>
+                                        <asp:ListItem>外观设计专利</asp:ListItem>
+                                        <asp:ListItem>其他</asp:ListItem>
                                     </asp:DropDownList>
                                 </td>
 							</tr>

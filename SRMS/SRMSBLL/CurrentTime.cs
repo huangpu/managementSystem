@@ -6,19 +6,35 @@ using System.Data;
 
 namespace SRMSBLL
 {
-    class CurrentTime
+    public class CurrentTime
     {
-        private DateTime dt = new DateTime();
+        private DateTime dt = DateTime.Now; 
         private string year;
         private string month;
         private string date;
         private string hour;
         private string minute;
         private string secord;
+        private static CurrentTime ct = null;
 
-
-
-
+        private CurrentTime()
+        {
+        }
+        public static CurrentTime GetInstance()
+        {
+            if (ct == null)
+            {
+                ct = new CurrentTime();
+            }
+            return ct;
+        }
+        
+        public string timeFormat(string format)
+        {
+            string temp = null;
+            temp = dt.ToString(format);
+            return temp;
+        }
         public string Year
         {
             get 

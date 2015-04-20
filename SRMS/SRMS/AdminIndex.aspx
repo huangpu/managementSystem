@@ -24,6 +24,10 @@
     <a href="#">发布公告</a>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <ContentTemplate>
     <div class="box-header" data-original-title>
 						<h2><i class="halflings-icon user"></i><span class="break"></span>发布公告</h2>
 						
@@ -75,4 +79,6 @@
 						  </tbody>
 					  </table>
 					</div>
+                     </ContentTemplate>
+    </asp:UpdatePanel>
 </asp:Content>

@@ -2,37 +2,72 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SRMSDAL;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace SRMSBLL
 {
-    class CreateID
+    public class CreateID
     {
         private string newsID;
-        private CurrentTime ct = new CurrentTime();
+        private string sqlString;
+        private SqlDataBase db;
+        private DataSet ds;
+        private string currentTime;
+      
+        public CreateID()
+        {
+            db = new SqlDataBase();
+        }
         public string getNewsID()
         {
-
+            string temp;
+            sqlString = "select News_ID from tbl_NewsBulletin order by News_ID desc";
+            DataRow dr = db.GetDataRow(sqlString);
+            currentTime = CurrentTime.GetInstance().timeFormat("yyyyMMdd");
+            if (dr != null)
+            {
+                temp = dr[0].ToString();
+                newsID = parserID(temp);
+            }
+            else
+            {
+                newsID = currentTime + "001";
+            }
             return newsID;
         }
-        private string mend2(string number)
+        private string parserID(string temp)
         {
-            int temp = int.Parse(number)/10;
-            if (temp == 0)
+            string prefix = temp.Substring(0, 8);
+            string postfix = parserPostfix(temp.Substring(8));
+            if (currentTime.Equals(prefix))
             {
-                number = "0" + number;
+                temp = prefix + postfix;
             }
-            return number;
+            else
+            {
+                temp = currentTime + "001";
+            }
+            return temp;
         }
-        private string mend3(string number)
+
+        private string parserPostfix(string number)
         {
-            int temp = int.Parse(number) / 10;
-            if (temp == 0)
+            int oldNumber = Convert.ToInt32(number) + 1;
+            int flag = oldNumber / 10;
+
+            if (flag == 0)
             {
-                number = "00" + number;
+                number = "00" + oldNumber;
             }
-            else if (temp > 0 && temp <= 9)
+            else if (flag > 0 && flag <= 9)
             {
-                number = "0" + number;
+                number = "0" + oldNumber;
+            }
+            else
+            {
+                number = oldNumber.ToString();
             }
             return number;
         }
