@@ -27,7 +27,7 @@ namespace SRMSBLL
             dt = db.Pager(tablename, strcondition, orderkey, strorder, pageIndex, pageSize, out count);
             return dt;
         }
-        public Boolean insertNews(string newsID, string newsName, string time, string author, string newsContent)
+        public bool insertNews(string newsID, string newsName, string time, string author, string newsContent)
         {
             sqlString = "insert into tbl_NewsBulletin Values('" + newsID + "','" + newsName + "','" + time + "','" + author + "','" + newsContent + "')";
             if (db.ExecuteSQL(sqlString) != -1)

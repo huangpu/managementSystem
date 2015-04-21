@@ -38,6 +38,10 @@
 <a href="#">申报</a>项目 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+ <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <ContentTemplate>
 <div class="box-header" data-original-title>
 						<h2><i class="halflings-icon user"></i>申报项目</h2>
 						
@@ -67,13 +71,13 @@
 							<tr>
 								<td class="style5">所属学院：</td>
 								<td class="style29" colspan="3">
-                                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                                    <asp:Label ID="Project_Institute" runat="server" Text="Label"></asp:Label>
                                 </td>
 							</tr>
 							<tr>
 								<td class="style5">项目性质：</td>
 								<td class="style2">
-                                    <asp:DropDownList ID="DropDownList1" runat="server">
+                                    <asp:DropDownList ID="Project_Nature" runat="server">
                                         <asp:ListItem>自然科学</asp:ListItem>
                                         <asp:ListItem>社会科学</asp:ListItem>
                                     </asp:DropDownList>
@@ -81,7 +85,7 @@
 								<td class="style3">
                                     项目类别：</td>
 								<td class="style29">
-                                    <asp:DropDownList ID="DropDownList3" runat="server">
+                                    <asp:DropDownList ID="Project_class" runat="server">
                                         <asp:ListItem>一类</asp:ListItem>
                                         <asp:ListItem>二类</asp:ListItem>
                                         <asp:ListItem>三类</asp:ListItem>
@@ -92,10 +96,11 @@
 							<tr>
 								<td class="style6">校内主管部门：</td>
 								<td class="style7">
-                                    科技处</td>
+                                    <asp:Label ID="Project_MgDpart" runat="server" Text="科技处"></asp:Label>
+                                </td>
 								<td class="style8">所属学科：</td>
 								<td class="style1">
-                                    <asp:DropDownList ID="DropDownList8" runat="server" 
+                                    <asp:DropDownList ID="Project_Course" runat="server" 
                                         DataSourceID="SqlDataSource1" DataTextField="Course_ID" 
                                         DataValueField="Course_ID">
                                         <asp:ListItem>请选择</asp:ListItem>
@@ -109,7 +114,7 @@
 							<tr>
 								<td class="style5">项目等级：</td>
 								<td class="style29" colspan="3">
-                                    <asp:DropDownList ID="DropDownList5" runat="server">
+                                    <asp:DropDownList ID="Project_level" runat="server">
                                         <asp:ListItem>国家级</asp:ListItem>
                                         <asp:ListItem>省部级</asp:ListItem>
                                         <asp:ListItem>市厅级</asp:ListItem>
@@ -123,11 +128,11 @@
 							<tr>
 								<td class="style5">项目来源：</td>
 								<td class="style2">
-                                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="Project_Source" runat="server"></asp:TextBox>
                                 </td>
 								<td class="style3">项目密级：</td>
 								<td class="style26">
-                                    <asp:DropDownList ID="DropDownList9" runat="server">
+                                    <asp:DropDownList ID="Project_SecretGrade" runat="server">
                                         <asp:ListItem>秘密</asp:ListItem>
                                         <asp:ListItem>机密</asp:ListItem>
                                         <asp:ListItem>绝密</asp:ListItem>
@@ -137,23 +142,23 @@
 							<tr>
 								<td class="style5">项目成员：</td>
 								<td class="style2" colspan="3">
-                                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="Project_Team" runat="server"></asp:TextBox>
                                 </td>
 							</tr>
 							<tr>
 								<td class="style5">项目开始时间：</td>
 								<td class="style2">
-                                    <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="Project_StartTime" runat="server"></asp:TextBox>
                                 </td>
 								<td class="style3">计划结项时间：</td>
 								<td class="style2">
-                                    <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="Project_PlanTime" runat="server"></asp:TextBox>
                                 </td>
 							</tr>
 							<tr>
 								<td class="style5">预期成果形式：</td>
 								<td class="style2" colspan="3">
-                                    <asp:DropDownList ID="DropDownList10" runat="server">
+                                    <asp:DropDownList ID="Project_ResultForm" runat="server">
                                         <asp:ListItem>论文和专著</asp:ListItem>
                                         <asp:ListItem>应用软件</asp:ListItem>
                                         <asp:ListItem>新产品原型</asp:ListItem>
@@ -165,7 +170,7 @@
 							<tr>
 								<td class="style5">申请经费：</td>
 								<td class="style2" colspan="3">
-                                    <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="Project_PlanMoney" runat="server"></asp:TextBox>
                                 </td>
 							</tr>
 							<tr>
@@ -175,7 +180,8 @@
 								<td class="style5" colspan="4">
                                    
                                         <div class="controls">
-                                            <textarea id="content4" class="cleditor" cols="20" name="content" rows="3"></textarea>
+                                            <textarea id="Project_Content" class="cleditor" cols="20" name="content" 
+                                                rows="3"></textarea>
                                         </div>
                                    
                                 </td>
@@ -187,7 +193,8 @@
 								<td class="style5" colspan="4">
                                     
                                         <div class="controls">
-                                            <textarea id="Textarea1" class="cleditor" cols="20" name="content" rows="3"></textarea>
+                                            <textarea id="Project_History" class="cleditor" cols="20" name="content" 
+                                                rows="3"></textarea>
                                         </div>
                                     
                                 </td>
@@ -199,14 +206,17 @@
 								<td class="style5" colspan="4">
                                     
                                         <div class="controls">
-                                            <textarea id="Textarea2" class="cleditor" cols="20" name="content" rows="3"></textarea>
+                                            <textarea id="Project_Innovate" class="cleditor" cols="20" name="content" 
+                                                rows="3"></textarea>
                                         </div>
                                     
                                 </td>
 							</tr>
                             <tr>
 								<td class="style5" colspan="4"><asp:Button ID="submit" runat="server" type="submit" class="btn btn-primary"  
-                                        Text="提交" OnClientClick="{if(confirm('确定要申请项目？')){return true;}return false;}"   />
+                                        Text="提交" 
+                                        OnClientClick="{if(confirm('确定要申请项目？')){return true;}return false;}" 
+                                        onclick="submit_Click"   />
                                     <asp:Button ID="reset" runat="server" type="reset" class="btn"  Text="取消" 
                                          /></td>
 							</tr>
@@ -214,5 +224,7 @@
 						  </tbody>
 					  </table>
 					</div>
+                    </ContentTemplate>
+    </asp:UpdatePanel>
 </asp:Content>
 

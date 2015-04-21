@@ -25,5 +25,11 @@ namespace SRMSBLL
             string className = assemblyName + "." + db + "News";
             return (INews)Assembly.Load(assemblyName).CreateInstance(className);
         }
+
+        public static IProject CreatePrjSubmit()
+        {
+            string className = assemblyName + "." + db + "PrjSubmit";
+            return (IProject)Assembly.Load(assemblyName).CreateInstance(className);
+        }
     }
 }

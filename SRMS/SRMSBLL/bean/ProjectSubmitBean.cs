@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SRMSBLL
 {
-    class ProjectSubmitBean
+    public class ProjectSubmitBean
     {
         private string prjID;
         private string prjName;
@@ -22,12 +22,15 @@ namespace SRMSBLL
         private double prjPlanMoney;
         private double prjRatifyMoney;
         private string prjClass;
-        private string prjCourseOne;
-        private string prjCourseTwo;
+        private string prjCourse;
+        private string prjLevel;
+        private string prjMgDpart;
         private string prjTeam;
         private string prjContent;
         private string prjHistory;
         private string prjInnovate;
+
+
 
         public string PrjID
         {
@@ -119,16 +122,22 @@ namespace SRMSBLL
             set { prjClass = value; }
         }
 
-        public string PrjCourseOne
+        public string PrjCourse
         {
-            get { return prjCourseOne; }
-            set { prjCourseOne = value; }
+            get { return prjCourse; }
+            set { prjCourse = value; }
         }
 
-        public string PrjCourseTwo
+        public string PrjLevel
         {
-            get { return prjCourseTwo; }
-            set { prjCourseTwo = value; }
+            get { return prjLevel; }
+            set { prjLevel = value; }
+        }
+
+        public string PrjMgDpart
+        {
+            get { return prjMgDpart; }
+            set { prjMgDpart = value; }
         }
 
         public string PrjTeam
