@@ -227,6 +227,7 @@
     <Content Include="PersonalSubmit.aspx" />
     <Content Include="PersonalUnderway.aspx" />
     <Content Include="PersonalWait.aspx" />
+    <Content Include="PersonalWEdit.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -363,6 +364,13 @@
     </Compile>
     <Compile Include="PersonalWait.aspx.designer.cs">
       <DependentUpon>PersonalWait.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalWEdit.aspx.cs">
+      <DependentUpon>PersonalWEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalWEdit.aspx.designer.cs">
+      <DependentUpon>PersonalWEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebForm1.aspx.cs">

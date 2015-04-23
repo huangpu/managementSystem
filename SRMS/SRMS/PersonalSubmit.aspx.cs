@@ -24,7 +24,7 @@ namespace SRMS
             ProjectSubmitBean ps = new ProjectSubmitBean();
             CreateID ci = new CreateID();
 
-            ps.PrjID = ci.getNewsID();
+            ps.PrjID = ci.getProjectID();
             ps.PrjName = Project_Name.Text.ToString();
             ps.PrjPerson = Project_PersonLiable.Text.ToString();
             ps.PrjInstitute = "11";

@@ -32,11 +32,11 @@ namespace SRMS
             bool flag = news.insertNews(newsID, newsTitle, newsTime, newsAuthor, newsContent);
             if (flag)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "confim", "<script>alert('发布公告成功!');location.href='AdminIndex.aspx';</script>", false);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1,this.GetType(), "confim", "<script>alert('发布公告成功!');location.href='AdminIndex.aspx';</script>", false);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "confim", "<script>alert('发布公告失败!');location.href='AdminIndex.aspx';</script>", false);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1,this.GetType(), "confim", "<script>alert('发布公告失败!');location.href='AdminIndex.aspx';</script>", false);
             }
             
         }

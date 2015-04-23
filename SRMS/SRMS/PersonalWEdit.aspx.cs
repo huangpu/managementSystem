@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using SRMSBLL.Interface;
+using SRMSBLL;
+
+namespace SRMS
+{
+    public partial class PersonalWEdit : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            string id = Request.QueryString["id"];
+            IProject prj = DataAccess.CreatePrjSubmit();
+            ProjectSubmitBean psb = prj.getProject(id);
+            Project_Name.Text = psb.PrjName;
+            Project_PersonLiable.Text = psb.PrjPerson;
+            Project_Institute.Text = psb.PrjInstitute;
+            Project_Nature.Text = psb.PrjNature;
+            Project_class.Text = psb.PrjClass;
+            Project_MgDpart.Text = psb.PrjMgDpart;
+            Project_Course.Text = psb.PrjCourse;
+            Project_level.Text = psb.PrjLevel;
+            Project_Source.Text = psb.PrjSource;
+            Project_SecretGrade.Text = psb.PrjSecretGrade;
+            Project_Team.Text = psb.PrjTeam;
+            Project_StartTime.Text = psb.PrjStartTime;
+            Project_PlanTime.Text = psb.PrjPlanTime;
+            Project_ResultForm.Text = psb.PrjResultForm;
+            Project_PlanMoney.Text = psb.PrjPlanMoney.ToString();
+            Project_Content.Value = "dfs";
+
+
+        }
+    }
+}

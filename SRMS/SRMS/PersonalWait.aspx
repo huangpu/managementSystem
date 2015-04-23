@@ -1,6 +1,25 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PersonalRoot.Master" AutoEventWireup="true" CodeBehind="PersonalWait.aspx.cs" Inherits="SRMS.PersonalWait" %>
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<style type="text/css">
+        .style1
+        {
+            width: 82px;
+        }
+        .style2
+        {
+            height: 37px;
+        }
+        .style3
+        {
+            width: 82px;
+            height: 30px;
+        }
+        .style4
+        {
+            height: 30px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <a href="#">待审项目</a>
@@ -34,21 +53,22 @@
 						  <tbody>
 							<asp:Repeater ID="Repeater1" runat="server">
                                   <ItemTemplate>  
-                                   <tr>
+                                  <tr>
 								<td class="style1">
-                                项目编号
+                                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Project_ID") %>'></asp:Label>
                                     </td>
 							    <td class="style1">
-                                项目名称
+                                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("Project_Name") %>'></asp:Label>
                                     </td>
 								<td class="style1">
-                                负责人
+                                     <asp:Label ID="Project_PersonLiable" runat="server" Text='<%# Eval("Project_PersonLiable") %>'></asp:Label>
                                     </td>
                                <td class="style1">
-                               项目状态
+                                    <span class="label label-success"><asp:Label ID="Project_Status" runat="server" Text='<%# Eval("Project_Status") %>'></asp:Label>
+                                    </span>
                                     </td>
 								<td class="style1">
-                                操作
+                                <a href="PersonalWEdit.aspx?id=<%# Eval("Project_ID") %>">修改
                                     </td>
 							</tr>
                             </ItemTemplate>
@@ -65,10 +85,11 @@
 					  </table> 
                         <webdiyer:AspNetPager ID="AspNetPager1" runat="server"
                         AlwaysShow="True" 
-                 CustomInfoHTML="每页%PageSize%条记录 总共%RecordCount%条记录 页码：%CurrentPageIndex%/%PageCount%" CustomInfoSectionWidth=""  FirstPageText="首页" 
-                 HorizontalAlign="Right" LastPageText="尾页" LayoutType="Table" NextPageText="下一页" 
+                 CustomInfoHTML="每页%PageSize%条记录 总共%RecordCount%条记录 页码：%CurrentPageIndex%/%PageCount%" 
+                            CustomInfoSectionWidth=""  FirstPageText="首页" 
+                 HorizontalAlign="Center" LastPageText="尾页" LayoutType="Table" NextPageText="下一页" 
                  PrevPageText="上一页" ShowCustomInfoSection="Left" 
-                 PageSize="10" 
+                 PageSize="10" onpagechanging="AspNetPager1_PageChanging"
                             >
 
                         </webdiyer:AspNetPager>

@@ -28,13 +28,11 @@
     </asp:ScriptManager>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
     <ContentTemplate>
-    <div class="box-header" data-original-title>
-						<h2><i class="halflings-icon user"></i><span class="break"></span>发布公告</h2>
-						
+                      <div class="box-header" data-original-title>
+						<h2><i class="halflings-icon user"></i><span class="break"></span>发布公告</h2>				
 					</div>
-<div class="box-content">
-						<table class="table table-striped table-bordered  " 
-                            align="center">
+                        <div class="box-content">  
+						<table class="table table-striped table-bordered">
 						  <thead>
 							  <tr>
 								  <th class="style26" colspan="2">【基本信息】：必填</th>

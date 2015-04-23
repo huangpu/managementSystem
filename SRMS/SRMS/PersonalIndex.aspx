@@ -42,7 +42,7 @@
                                   <ItemTemplate>  
                                    <tr>
 								<td class="style1">
-                                    <asp:Label ID="News_ID" runat="server" Text='<%# Eval("News_ID") %>'>></asp:Label></td>
+                                    <asp:Label ID="News_ID" runat="server" Text='<%# Eval("News_ID") %>'></asp:Label></td>
 								<td class="style1">
                                     <asp:Label ID="News_Name" runat="server" Text='<%# Eval("News_Name") %>'></asp:Label></td>
 								<td class="style1">
@@ -65,8 +65,9 @@
 					  </table> 
                         <webdiyer:AspNetPager ID="AspNetPager1" runat="server"
                         AlwaysShow="True" 
-                 CustomInfoHTML="每页%PageSize%条记录 总共%RecordCount%条记录 页码：%CurrentPageIndex%/%PageCount%" CustomInfoSectionWidth=""  FirstPageText="首页" 
-                 HorizontalAlign="Right" LastPageText="尾页" LayoutType="Table" NextPageText="下一页" 
+                 CustomInfoHTML="每页%PageSize%条记录 总共%RecordCount%条记录 页码：%CurrentPageIndex%/%PageCount%" 
+                            CustomInfoSectionWidth=""  FirstPageText="首页" 
+                 HorizontalAlign="Center" LastPageText="尾页" LayoutType="Table" NextPageText="下一页" 
                  PrevPageText="上一页" ShowCustomInfoSection="Left" 
                  PageSize="10" onpagechanging="AspNetPager1_PageChanging"
                             >

@@ -884,7 +884,7 @@ ul.messages li .message {
 	padding: 10px;
 	background: #fff !important;
     top: 0px;
-    left: -34px;
+    left: -0px;
 }
 
 /* Vertical Bar Chart
@@ -1842,6 +1842,7 @@ fieldset[disabled] .btn-link:focus {
   -webkit-border-radius: 0px !important;
 	 -moz-border-radius: 0px !important;
           border-radius: 0px !important;
+    height: 244px;
 }
 
 .table-bordered th,

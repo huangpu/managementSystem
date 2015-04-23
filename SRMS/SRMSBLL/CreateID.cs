@@ -37,6 +37,23 @@ namespace SRMSBLL
             }
             return newsID;
         }
+        public string getProjectID()
+        {
+            string temp;
+            sqlString = "select Project_ID from tbl_ProjectSubmit order by Project_ID desc";
+            DataRow dr = db.GetDataRow(sqlString);
+            currentTime = CurrentTime.GetInstance().timeFormat("yyyyMMdd");
+            if (dr != null)
+            {
+                temp = dr[0].ToString();
+                newsID = parserID(temp);
+            }
+            else
+            {
+                newsID = currentTime + "001";
+            }
+            return newsID;
+        }
         private string parserID(string temp)
         {
             string prefix = temp.Substring(0, 8);
