@@ -68,7 +68,7 @@ namespace SRMSDAL
         //用于执行SQL语句的方法，针对Update,Insert,Delete操作返回影响的行数，其他就返回-1
         public int ExecuteSQL(string sqlString)
         {
-            int count = -1;
+            int count = 0;
             this.Open();
             try
             {
@@ -77,7 +77,7 @@ namespace SRMSDAL
             }
             catch
             {
-                count = -1;
+                count = 0;
             }
             finally
             {

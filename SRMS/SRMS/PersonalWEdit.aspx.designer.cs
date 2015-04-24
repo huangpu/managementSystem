@@ -184,6 +184,24 @@ namespace SRMS {
         protected global::System.Web.UI.HtmlControls.HtmlTextArea Project_Content;
         
         /// <summary>
+        /// Project_History control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea Project_History;
+        
+        /// <summary>
+        /// Project_Innovate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea Project_Innovate;
+        
+        /// <summary>
         /// submit control.
         /// </summary>
         /// <remarks>

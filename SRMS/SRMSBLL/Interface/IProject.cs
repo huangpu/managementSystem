@@ -12,5 +12,7 @@ namespace SRMSBLL.Interface
         DataTable pager(string tablename, string strcondition, string orderkey, string strorder, int pageIndex, int pageSize,
                       out int count);
         ProjectSubmitBean getProject(string projectID);
+        bool updateProject(ProjectSubmitBean projectSubmit);
+
     }
 }

@@ -29,6 +29,18 @@ namespace SRMSBLL
             }
             return false;
         }
+
+        public bool updateProject(ProjectSubmitBean projectSubmit)
+        {
+            sqlString = "update tbl_ProjectSubmit set Project_Name='" + projectSubmit.PrjName + "',Project_PersonLiable='" + projectSubmit.PrjPerson + "',Institute_ID='" + projectSubmit.PrjInstitute + "',Project_Nature='" + projectSubmit.PrjNature + "',Project_Status='" + projectSubmit.PrjStatus + "',Project_Source='" + projectSubmit.PrjSource + "',Project_StartTime='" + projectSubmit.PrjStartTime + "',Project_PlanTime='" + projectSubmit.PrjPlanTime + "',Project_ResultForm='" + projectSubmit.PrjResultForm + "',Project_SecretGrade='" + projectSubmit.PrjSecretGrade + "',Project_PlanMoney='" + projectSubmit.PrjPlanMoney + "',Project_class='" + projectSubmit.PrjClass + "',Project_Course='" + projectSubmit.PrjCourse + "',Project_level='" + projectSubmit.PrjLevel + "',Project_Team='" + projectSubmit.PrjTeam + "',Project_Content='" + projectSubmit.PrjContent + "',Project_History='" + projectSubmit.PrjHistory + "',Project_Innovate='" + projectSubmit.PrjInnovate + "',Project_MgDpart='" + projectSubmit.PrjMgDpart + "' where Project_ID='" + projectSubmit.PrjID + "'";
+           
+            if (db.ExecuteSQL(sqlString) != 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public DataTable pager(string tablename, string strcondition, string orderkey, string strorder, int pageIndex, int pageSize,
                       out int count)
         {

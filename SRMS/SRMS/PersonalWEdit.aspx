@@ -162,7 +162,7 @@
 								<td class="style5" colspan="4">
                                     
                                         <div class="controls">
-                                            <textarea id="Project_History" class="cleditor" cols="20" name="Project_History" 
+                                            <textarea id="Project_History" class="cleditor" cols="20" name="Project_History"  runat=server 
                                                 rows="3"></textarea>
                                         </div>
                                     
@@ -175,16 +175,17 @@
 								<td class="style5" colspan="4">
                                     
                                         <div class="controls">
-                                            <textarea id="Project_Innovate" class="cleditor" cols="20" name="Project_Innovate" 
+                                            <textarea id="Project_Innovate" class="cleditor" cols="20" name="Project_Innovate"  runat=server 
                                                 rows="3"></textarea>
                                         </div>
                                     
                                 </td>
 							</tr>
                             <tr>
-								<td class="style5" colspan="4"><asp:Button ID="submit" runat="server" type="submit" class="btn btn-primary"  
+								<td class="style5" colspan="4">
+                                    <asp:Button ID="submit" runat="server" type="submit" class="btn btn-primary"  
                                         Text="提交修改" 
-                                        OnClientClick="{if(confirm('确定要申请项目？')){return true;}return false;}" 
+                                        OnClientClick="{if(confirm('确定要修改？')){return true;}return false;}" onclick="submit_Click" 
                                           />
                                     <asp:Button ID="reset" runat="server" type="reset" class="btn"  Text="取消" 
                                          /></td>
