@@ -219,7 +219,8 @@
     <Content Include="PersonalCsDetail.aspx" />
     <Content Include="PersonalIndex.aspx" />
     <Content Include="PersonalInfor.aspx" />
-    <Content Include="PersonalInter.aspx" />
+    <Content Include="PersonalUnDetail.aspx" />
+    <Content Include="PersonalUnInter.aspx" />
     <Content Include="PersonalMnyDetail.aspx" />
     <Content Include="PersonalMoney.aspx" />
     <Content Include="PersonalNsDetail.aspx" />
@@ -302,12 +303,19 @@
     <Compile Include="PersonalInfor.aspx.designer.cs">
       <DependentUpon>PersonalInfor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PersonalInter.aspx.cs">
-      <DependentUpon>PersonalInter.aspx</DependentUpon>
+    <Compile Include="PersonalUnDetail.aspx.cs">
+      <DependentUpon>PersonalUnDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PersonalInter.aspx.designer.cs">
-      <DependentUpon>PersonalInter.aspx</DependentUpon>
+    <Compile Include="PersonalUnDetail.aspx.designer.cs">
+      <DependentUpon>PersonalUnDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalUnInter.aspx.cs">
+      <DependentUpon>PersonalUnInter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalUnInter.aspx.designer.cs">
+      <DependentUpon>PersonalUnInter.aspx</DependentUpon>
     </Compile>
     <Compile Include="PersonalMnyDetail.aspx.cs">
       <DependentUpon>PersonalMnyDetail.aspx</DependentUpon>

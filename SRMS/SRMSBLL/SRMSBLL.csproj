@@ -48,6 +48,8 @@
     <Compile Include="DataAccess.cs" />
     <Compile Include="bean\InstituteDataBean.cs" />
     <Compile Include="bean\InterimReportBean.cs" />
+    <Compile Include="Interface\IInterimReport.cs" />
+    <Compile Include="Interface\IMoney.cs" />
     <Compile Include="Interface\INews.cs" />
     <Compile Include="Interface\IProject.cs" />
     <Compile Include="Interface\IUser.cs" />
@@ -56,6 +58,8 @@
     <Compile Include="bean\ProjectSubmitBean.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="bean\ResultBean.cs" />
+    <Compile Include="SqlInterimRt.cs" />
+    <Compile Include="SqlMoney.cs" />
     <Compile Include="SqlNews.cs" />
     <Compile Include="SqlPrjSubmit.cs" />
     <Compile Include="SqlUser.cs" />

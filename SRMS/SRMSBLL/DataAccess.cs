@@ -31,5 +31,17 @@ namespace SRMSBLL
             string className = assemblyName + "." + db + "PrjSubmit";
             return (IProject)Assembly.Load(assemblyName).CreateInstance(className);
         }
+
+        public static IInterimReport CreateInterimRt()
+        {
+            string className = assemblyName + "." + db + "InterimRt";
+            return (IInterimReport)Assembly.Load(assemblyName).CreateInstance(className);
+        }
+
+        public static IMoney CreateImoney()
+        {
+            string className = assemblyName + "." + db + "Money";
+            return (IMoney)Assembly.Load(assemblyName).CreateInstance(className);
+        }
     }
 }

@@ -36,13 +36,13 @@
                                   <ItemTemplate>  
                                    <tr>
 								<td class="style1">
-                                项目编号
+                               <asp:Label ID="Label1" runat="server" Text='<%# Eval("Project_ID") %>'></asp:Label>
                                     </td>
 							    <td class="style1">
-                                项目名称
+                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("Project_Name") %>'></asp:Label>
                                     </td>
 								<td class="style1">
-                                负责人
+                                <asp:Label ID="Project_PersonLiable" runat="server" Text='<%# Eval("Project_PersonLiable") %>'></asp:Label>
                                     </td>
                                <td class="style1">
                                项目经费

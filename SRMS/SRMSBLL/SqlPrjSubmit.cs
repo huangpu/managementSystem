@@ -32,9 +32,9 @@ namespace SRMSBLL
 
         public bool updateProject(ProjectSubmitBean projectSubmit)
         {
-            sqlString = "update tbl_ProjectSubmit set Project_Name='" + projectSubmit.PrjName + "',Project_PersonLiable='" + projectSubmit.PrjPerson + "',Institute_ID='" + projectSubmit.PrjInstitute + "',Project_Nature='" + projectSubmit.PrjNature + "',Project_Status='" + projectSubmit.PrjStatus + "',Project_Source='" + projectSubmit.PrjSource + "',Project_StartTime='" + projectSubmit.PrjStartTime + "',Project_PlanTime='" + projectSubmit.PrjPlanTime + "',Project_ResultForm='" + projectSubmit.PrjResultForm + "',Project_SecretGrade='" + projectSubmit.PrjSecretGrade + "',Project_PlanMoney='" + projectSubmit.PrjPlanMoney + "',Project_class='" + projectSubmit.PrjClass + "',Project_Course='" + projectSubmit.PrjCourse + "',Project_level='" + projectSubmit.PrjLevel + "',Project_Team='" + projectSubmit.PrjTeam + "',Project_Content='" + projectSubmit.PrjContent + "',Project_History='" + projectSubmit.PrjHistory + "',Project_Innovate='" + projectSubmit.PrjInnovate + "',Project_MgDpart='" + projectSubmit.PrjMgDpart + "' where Project_ID='" + projectSubmit.PrjID + "'";
-           
-            if (db.ExecuteSQL(sqlString) != 0)
+            sqlString = "update tbl_ProjectSubmit set Project_Name='" + projectSubmit.PrjName + "',Project_PersonLiable='" + projectSubmit.PrjPerson + "',Institute_ID='" + projectSubmit.PrjInstitute + "',Project_Nature='" + projectSubmit.PrjNature + "',Project_Source='" + projectSubmit.PrjSource + "',Project_StartTime='" + projectSubmit.PrjStartTime + "',Project_PlanTime='" + projectSubmit.PrjPlanTime + "',Project_ResultForm='" + projectSubmit.PrjResultForm + "',Project_SecretGrade='" + projectSubmit.PrjSecretGrade + "',Project_PlanMoney=" + projectSubmit.PrjPlanMoney + ",Project_class='" + projectSubmit.PrjClass + "',Project_Course='" + projectSubmit.PrjCourse + "',Project_level='" + projectSubmit.PrjLevel + "',Project_Team='" + projectSubmit.PrjTeam + "',Project_Content='" + projectSubmit.PrjContent + "',Project_History='" + projectSubmit.PrjHistory + "',Project_Innovate='" + projectSubmit.PrjInnovate + "',Project_MgDpart='" + projectSubmit.PrjMgDpart + "' where Project_ID='" + projectSubmit.PrjID + "'";
+
+            if (db.ExecuteSQL(sqlString) != -1)
             {
                 return true;
             }
@@ -65,8 +65,8 @@ namespace SRMSBLL
             ps.PrjPlanTime = ds.Tables[0].Rows[0][9].ToString();
             ps.PrjResultForm = ds.Tables[0].Rows[0][10].ToString();
             ps.PrjSecretGrade = ds.Tables[0].Rows[0][11].ToString();
-            ps.PrjPlanMoney = Double.Parse(ds.Tables[0].Rows[0][12].ToString().Trim());
-//            ps.PrjRatifyMoney = double.Parse(ds.Tables[0].Rows[0][12].ToString());
+            ps.PrjPlanMoney = isDouble(ds.Tables[0].Rows[0][12].ToString());
+            ps.PrjRatifyMoney = isDouble(ds.Tables[0].Rows[0][13].ToString());
             ps.PrjClass = ds.Tables[0].Rows[0][14].ToString();
             ps.PrjCourse = ds.Tables[0].Rows[0][15].ToString();
             ps.PrjLevel = ds.Tables[0].Rows[0][16].ToString();
@@ -77,6 +77,16 @@ namespace SRMSBLL
             ps.PrjMgDpart = ds.Tables[0].Rows[0][21].ToString();
 
             return ps;
+        }
+
+        private double isDouble(string money)
+        {
+           
+            if (money.Length != 0)
+            {
+                return Double.Parse(money.Trim());
+            }
+            return 0;
         }
     }
 }

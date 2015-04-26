@@ -68,7 +68,7 @@ namespace SRMSDAL
         //用于执行SQL语句的方法，针对Update,Insert,Delete操作返回影响的行数，其他就返回-1
         public int ExecuteSQL(string sqlString)
         {
-            int count = 0;
+            int count = -1;
             this.Open();
             try
             {
@@ -77,7 +77,7 @@ namespace SRMSDAL
             }
             catch
             {
-                count = 0;
+                count = -1;
             }
             finally
             {
@@ -144,7 +144,39 @@ namespace SRMSDAL
             return dt;
         }
 
+        public DataTable Pager2(string tablename, string strGetFields, string orderkey, int strorder, int pageIndex, int pageSize,
+                     out int count)
+        {
+            DataTable dt = new DataTable();
+            //构造存储过程page的参数
+            count = 0;
+            SqlParameter[] paras = new SqlParameter[]{
+           new SqlParameter("@tblName",tablename),
+           new SqlParameter("@strGetFields",strGetFields),
+           new SqlParameter("@fldName",orderkey),
+           new SqlParameter("@OrderType",strorder),
+           new SqlParameter("@pageIndex",pageIndex),
+           new SqlParameter("@pageSize",pageSize),
+      
+           
+           new SqlParameter("@doCount",count),
+        };
+            paras[5].Direction = ParameterDirection.Output;   //指定count为输出类型
 
+            this.Open();
+            SqlCommand cmd = new SqlCommand("Seacher_Money", Conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddRange(paras);
+
+            SqlDataReader sdr;
+            using (sdr = cmd.ExecuteReader(CommandBehavior.CloseConnection))
+            {
+                dt.Load(sdr);
+            }
+            count = Convert.ToInt32(paras[5].Value);
+
+            return dt;
+        }
 
         
     }

@@ -68,7 +68,7 @@
                                     </span>
                                     </td>
 								<td class="style1">
-                                <a href="PersonalWEdit.aspx?id=<%# Eval("Project_ID") %>">修改
+                                <a href="PersonalWEdit.aspx?id=<%# Eval("Project_ID") %>">修改</a>
                                     </td>
 							</tr>
                             </ItemTemplate>

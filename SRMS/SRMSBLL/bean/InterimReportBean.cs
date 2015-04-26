@@ -5,10 +5,14 @@ using System.Text;
 
 namespace SRMSBLL
 {
-    class InterimReportBean
+    public class InterimReportBean
     {
         private string irID;
         private string irName;
+
+        private string irPerson;
+        private string irStartTime;
+        private string irPlanTime;
         private string irPlan;
         private string irFruit;
         private string irQuestion;
@@ -48,6 +52,26 @@ namespace SRMSBLL
         {
             get { return irAuditOpinion; }
             set { irAuditOpinion = value; }
+        }
+
+
+
+        public string IrPerson
+        {
+            get { return irPerson; }
+            set { irPerson = value; }
+        }
+
+        public string IrStartTime
+        {
+            get { return irStartTime; }
+            set { irStartTime = value; }
+        }
+
+        public string IrPlanTime
+        {
+            get { return irPlanTime; }
+            set { irPlanTime = value; }
         }
     }
 }

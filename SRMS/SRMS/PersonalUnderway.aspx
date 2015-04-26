@@ -28,27 +28,28 @@
 								  <th>项目名称</th>
 								  <th>负责人</th>
 								  <th>中期报告</th>
-                                  <th>详情</th>
+                                  <th>项目详情</th>
 							  </tr>
 						  </thead>   
 						  <tbody>
 							<asp:Repeater ID="Repeater1" runat="server">
                                   <ItemTemplate>  
-                                   <tr>
+                                  <tr>
 								<td class="style1">
-                                20140324001
+                                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Project_ID") %>'></asp:Label>
                                     </td>
 							    <td class="style1">
-                                项目名称
+                                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("Project_Name") %>'></asp:Label>
                                     </td>
 								<td class="style1">
-                                负责人
+                                     <asp:Label ID="Project_PersonLiable" runat="server" Text='<%# Eval("Project_PersonLiable") %>'></asp:Label>
                                     </td>
                                <td class="style1">
-                                 <a href="PersonalInter.aspx">中期报告</a> 
+                                    <a class="label label-success" href="PersonalUnInter.aspx?id=<%# Eval("Project_ID") %>">填写报告</a>
+                                    
                                     </td>
 								<td class="style1">
-                                详情
+                                <a href="PersonalUnDetail.aspx?id=<%# Eval("Project_ID") %>">详情</a>
                                     </td>
 							</tr>
                             </ItemTemplate>
@@ -68,7 +69,7 @@
                  CustomInfoHTML="每页%PageSize%条记录 总共%RecordCount%条记录 页码：%CurrentPageIndex%/%PageCount%" CustomInfoSectionWidth=""  FirstPageText="首页" 
                  HorizontalAlign="Right" LastPageText="尾页" LayoutType="Table" NextPageText="下一页" 
                  PrevPageText="上一页" ShowCustomInfoSection="Left" 
-                 PageSize="10" 
+                 PageSize="10" onpagechanging="AspNetPager1_PageChanging"
                             >
 
                         </webdiyer:AspNetPager>
