@@ -219,6 +219,7 @@
     <Content Include="PersonalCsDetail.aspx" />
     <Content Include="PersonalIndex.aspx" />
     <Content Include="PersonalInfor.aspx" />
+    <Content Include="PersonalMnyEdit.aspx" />
     <Content Include="PersonalUnDetail.aspx" />
     <Content Include="PersonalUnInter.aspx" />
     <Content Include="PersonalMnyDetail.aspx" />
@@ -302,6 +303,13 @@
     </Compile>
     <Compile Include="PersonalInfor.aspx.designer.cs">
       <DependentUpon>PersonalInfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalMnyEdit.aspx.cs">
+      <DependentUpon>PersonalMnyEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalMnyEdit.aspx.designer.cs">
+      <DependentUpon>PersonalMnyEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="PersonalUnDetail.aspx.cs">
       <DependentUpon>PersonalUnDetail.aspx</DependentUpon>

@@ -12,6 +12,7 @@ namespace SRMSBLL
         private double moneyUse;
         private double moneySurplus;
         private string moneyDetails;
+        private double moneyCrUse;
         private string moneyTime;
 
         public string PrjID
@@ -48,6 +49,12 @@ namespace SRMSBLL
         {
             get { return moneyTime; }
             set { moneyTime = value; }
+        }
+
+        public double MoneyCrUse
+        {
+            get { return moneyCrUse; }
+            set { moneyCrUse = value; }
         }
     }
 }

@@ -27,7 +27,8 @@
 								  <th>项目编号</th>
 								  <th>项目名称</th>
 								  <th>负责人</th>
-								  <th>项目经费</th>
+                                  <th>项目经费</th>
+								  <th>填写报表</th>
                                   <th>使用详情</th>
 							  </tr>
 						  </thead>   
@@ -45,7 +46,10 @@
                                 <asp:Label ID="Project_PersonLiable" runat="server" Text='<%# Eval("Project_PersonLiable") %>'></asp:Label>
                                     </td>
                                <td class="style1">
-                               项目经费
+                               <asp:Label ID="Label3" runat="server" Text='<%# Eval("Project_RatifyMoney") %>'></asp:Label>
+                               </td>
+                               <td class="style1">
+                                <a href="PersonalMnyEdit.aspx"> 填写</a>
                                     </td>
 								<td class="style1">
                                <a href="PersonalMnyDetail.aspx"> 详情</a>

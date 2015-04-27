@@ -10,11 +10,15 @@
    <div class="row-fluid sortable">		
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon user"></i>经费使用详情&nbsp;&nbsp; 总经费：<asp:Label 
+						&nbsp; 
+                       项目编号：<asp:Label ID="Label4" runat="server" Text="20150416001"></asp:Label>
+                       &nbsp;
+                       项目名称：<asp:Label ID="Label5" runat="server" Text="基于Android的宠物交友平台"></asp:Label>
+						
+					     &nbsp; 总经费：<asp:Label 
                                 ID="Label1" runat="server" Text="2000.0"></asp:Label>
 &nbsp; 已用经费：<asp:Label ID="Label2" runat="server" Text="1000.0"></asp:Label>
 &nbsp; 剩余经费：<asp:Label ID="Label3" runat="server" Text="1000.0"></asp:Label>
-                        </h2>
 						
 					     <br />
 						
