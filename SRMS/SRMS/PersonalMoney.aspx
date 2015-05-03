@@ -49,10 +49,10 @@
                                <asp:Label ID="Label3" runat="server" Text='<%# Eval("Project_RatifyMoney") %>'></asp:Label>
                                </td>
                                <td class="style1">
-                                <a href="PersonalMnyEdit.aspx"> 填写</a>
+                                <a href="PersonalMnyEdit.aspx?id=<%# Eval("Project_ID") %>"> 填写</a>
                                     </td>
 								<td class="style1">
-                               <a href="PersonalMnyDetail.aspx"> 详情</a>
+                               <a href="PersonalMnyDetail.aspx?id=<%# Eval("Project_ID") %>"> 详情</a>
                                     </td>
 							</tr>
                             </ItemTemplate>

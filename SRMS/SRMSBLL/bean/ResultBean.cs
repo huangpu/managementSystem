@@ -5,9 +5,11 @@ using System.Text;
 
 namespace SRMSBLL
 {
-    class ResultBean
+    public class ResultBean
     {
         private string userId;
+        private string rtPrjName;
+        private string rtPeople;
         private string rtBookNumber;
         private string rtBookNameC;
         private string rtBookNameEn;
@@ -104,6 +106,18 @@ namespace SRMSBLL
         {
             get { return rtExamine; }
             set { rtExamine = value; }
+        }
+
+        public string RtPrjName
+        {
+            get { return rtPrjName; }
+            set { rtPrjName = value; }
+        }
+
+        public string RtPeople
+        {
+            get { return rtPeople; }
+            set { rtPeople = value; }
         }
     }
 }

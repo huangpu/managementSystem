@@ -12,6 +12,8 @@ namespace SRMSBLL.Interface
                      out int count);
 
         bool insertMoney(UserMoneyBean money);
+
+        UserMoneyBean getUserMoney(string prjID);
         
     }
 }

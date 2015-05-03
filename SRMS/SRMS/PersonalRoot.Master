@@ -67,7 +67,8 @@
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i ><img src="images/people.png" width="24dp" height="20dp"/> </i> 张三
+								<i ><img src="images/people.png" width="24dp" height="20dp"/> </i> 
+                                <asp:Label ID="userName" runat="server" Text="Label"></asp:Label>
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
@@ -75,7 +76,7 @@
  									<span>账户设置</span>
 								</li>
 								<li><a href="#"><i ><img src="images/people3.png" width="24dp" heighth="35dp" /></i> 个人资料</a></li>
-								<li><a href="login.html"><i ><img src="images/logout2.png" width="24dp" heighth="35dp" /></i> 退出登录</a></li>
+								<li><a href="Login.aspx"><i ><img src="images/logout2.png" width="24dp" heighth="35dp" /></i> 退出登录</a></li>
 							</ul>
 						</li>
 						<!-- end: User Dropdown -->
@@ -96,7 +97,7 @@
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li><a href="PersonalIndex.aspx"><i class="icon-list-alt"></i><span class="hidden-tablet"> 科研公告</span></a></li>	
-						<li><a href="PersonalSubmit.aspx"><i class="icon-edit"></i><span class="hidden-tablet"> 项目申报</span></a></li>
+						<li><a href="PersonalSubmit.aspx"><i class="icon-envelope"></i><span class="hidden-tablet"> 项目申报</span></a></li>
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-folder-open"></i><span class="hidden-tablet"> 项目管理</span><span class="label label-important"> 4 </span></a>
 							<ul>
@@ -107,7 +108,7 @@
 							</ul>	
 						</li>
 						<li><a href="PersonalResult.aspx"><i class="icon-tasks"></i><span class="hidden-tablet"> 我的成果</span></a></li>
-						<li><a href="Login.aspx"><i class="icon-lock"></i><span class="hidden-tablet"> 登录页面</span></a></li>
+						<li><a href="PersonalAlterPw.aspx"><i class="icon-edit"></i><span class="hidden-tablet"> 修改密码</span></a></li>
 					</ul>
 				</div>
 			</div>

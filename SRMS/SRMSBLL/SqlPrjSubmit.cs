@@ -41,6 +41,26 @@ namespace SRMSBLL
             return false;
         }
 
+        public bool updataStatus(string prjID, string status)
+        {
+            sqlString = "update tbl_ProjectSubmit set Project_Status='" + status + "' where Project_ID='" + prjID + "'";
+            if (db.ExecuteSQL(sqlString) != -1)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool deleteProject(string prJID)
+        {
+            sqlString = "delete from tbl_ProjectSubmit where Project_ID='" + prJID + "'";
+            if (db.ExecuteSQL(sqlString) != -1)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public DataTable pager(string tablename, string strcondition, string orderkey, string strorder, int pageIndex, int pageSize,
                       out int count)
         {

@@ -14,6 +14,7 @@ namespace SRMSBLL
         private string sqlString;
         private SqlDataBase db;
         private DataSet ds;
+        private DataRow dr;
         private bool flag = true;
         private InterimReportBean psr = new InterimReportBean();
 
@@ -26,16 +27,27 @@ namespace SRMSBLL
         {
             sqlString = "select  tbl_ProjectSubmit.Project_Name, tbl_ProjectSubmit.Project_PersonLiable, tbl_ProjectSubmit.Project_StartTime, tbl_ProjectSubmit.Project_PlanTime, tbl_InterimReport.Interim_Plan, tbl_InterimReport.Interim_Fruit, tbl_InterimReport.Interim_Question from tbl_ProjectSubmit,tbl_InterimReport where tbl_ProjectSubmit.Project_ID='" + prjID + "'";
            // sqlString = "select  tbl_ProjectSubmit.Project_Name from tbl_ProjectSubmit,tbl_InterimReport where tbl_ProjectSubmit.Project_ID='" + prjID + "'";
-            ds = db.GetDataSet(sqlString);
-
-            psr.IrName= ds.Tables[0].Rows[0][0].ToString();
-            psr.IrPerson = ds.Tables[0].Rows[0][1].ToString();
-            psr.IrStartTime = ds.Tables[0].Rows[0][2].ToString();
-            psr.IrPlanTime = ds.Tables[0].Rows[0][3].ToString();
-            psr.IrPlan = ds.Tables[0].Rows[0][4].ToString();
-            psr.IrFruit = ds.Tables[0].Rows[0][5].ToString();
-            psr.IrQuestion = ds.Tables[0].Rows[0][6].ToString();
-
+            //ds = db.GetDataSet(sqlString);
+            dr = db.GetDataRow(sqlString);
+            if (dr != null)
+            {
+                psr.IrName = dr[0].ToString();
+                psr.IrPerson = dr[1].ToString();
+                psr.IrStartTime = dr[2].ToString();
+                psr.IrPlanTime = dr[3].ToString();
+                psr.IrPlan = dr[4].ToString();
+                psr.IrFruit = dr[5].ToString();
+                psr.IrQuestion = dr[6].ToString();
+            }
+            else
+            {
+                sqlString = "select  tbl_ProjectSubmit.Project_Name, tbl_ProjectSubmit.Project_PersonLiable, tbl_ProjectSubmit.Project_StartTime, tbl_ProjectSubmit.Project_PlanTime from tbl_ProjectSubmit where tbl_ProjectSubmit.Project_ID='" + prjID + "'";
+                dr = db.GetDataRow(sqlString);
+                psr.IrName = dr[0].ToString();
+                psr.IrPerson = dr[1].ToString();
+                psr.IrStartTime = dr[2].ToString();
+                psr.IrPlanTime = dr[3].ToString();
+            }
             return psr;
 
         }

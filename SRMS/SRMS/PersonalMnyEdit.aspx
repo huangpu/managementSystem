@@ -81,7 +81,7 @@
                             <tr>
 								<td class="style5" colspan="4">
                                     <div class="controls">
-                                        <textarea ID="Money_UseDetails" class="cleditor" cols="20" name="Interim_Question" runat=server 
+                                        <textarea ID="Money_UseDetails" class="cleditor" cols="20" name="Money_UseDetails" runat=server 
                                             rows="3"></textarea>
                                     </div>
                                 </td>

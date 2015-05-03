@@ -5,10 +5,13 @@ using System.Text;
 
 namespace SRMSBLL
 {
-    class ProjectEndBean
+    public class ProjectEndBean
     {
         private string prjID;
         private string prjName;
+        private string irPerson;
+        private string irStartTime;
+        private string irPlanTime;
         private string prjFruit;
         private string prjContent;
         private string prjPlanImplement;
@@ -62,6 +65,24 @@ namespace SRMSBLL
         {
             get { return prjEndOpinion; }
             set { prjEndOpinion = value; }
+        }
+
+        public string IrPerson
+        {
+            get { return irPerson; }
+            set { irPerson = value; }
+        }
+
+        public string IrStartTime
+        {
+            get { return irStartTime; }
+            set { irStartTime = value; }
+        }
+
+        public string IrPlanTime
+        {
+            get { return irPlanTime; }
+            set { irPlanTime = value; }
         }
     }
 }

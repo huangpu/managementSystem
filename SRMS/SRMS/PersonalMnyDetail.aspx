@@ -2,6 +2,16 @@
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <a href="#">项目经费</a>
+    <style type="text/css">
+        .style1
+        {
+            height: 35px;
+        }
+        .style2
+        {
+            height: 43px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 </asp:Content>
@@ -11,14 +21,14 @@
 				<div class="box span12">
 					<div class="box-header" data-original-title>
 						&nbsp; 
-                       项目编号：<asp:Label ID="Label4" runat="server" Text="20150416001"></asp:Label>
+                       项目编号：<asp:Label ID="projectID" runat="server" ></asp:Label>
                        &nbsp;
-                       项目名称：<asp:Label ID="Label5" runat="server" Text="基于Android的宠物交友平台"></asp:Label>
+                       项目名称：<asp:Label ID="projectName" runat="server" ></asp:Label>
 						
 					     &nbsp; 总经费：<asp:Label 
-                                ID="Label1" runat="server" Text="2000.0"></asp:Label>
-&nbsp; 已用经费：<asp:Label ID="Label2" runat="server" Text="1000.0"></asp:Label>
-&nbsp; 剩余经费：<asp:Label ID="Label3" runat="server" Text="1000.0"></asp:Label>
+                                ID="Money_Totality" runat="server" ></asp:Label>
+&nbsp; 已用经费：<asp:Label ID="Money_Use" runat="server" ></asp:Label>
+&nbsp; 剩余经费：<asp:Label ID="Money_surplus" runat="server"></asp:Label>
 						
 					     <br />
 						
@@ -27,28 +37,25 @@
 						<table class="table  table-bordered " align="center">
 						  <thead>
 							  <tr>
-								  <th align=center>项目编号</th>
-								  <th>项目名称</th>
-								  <th>使用金额</th>
-								  <th>使用详情</th>
-								  <th>使用时间</th>
+								  <th class="style2">使用金额</th>
+								  <th class="style2">使用详情</th>
+								  <th class="style2">使用时间</th>
 							  </tr>
 						  </thead>   
 						  <tbody>
 							<asp:Repeater ID="Repeater1" runat="server">
                                   <ItemTemplate>  
                                    <tr>
-								<td class="style1">
+								
                                   
 								<td class="style1">
-                                  
+                                 <asp:Label ID="Label3" runat="server" Text='<%# Eval("Money_CrUse") %>'></asp:Label>
+                                    </td>
 								<td class="style1">
-                                    
-								<td class="style1">
-									
+									 <asp:Label ID="Label1" runat="server" Text='<%# Eval("Money_UseDetails") %>'></asp:Label>
 								</td>
 								<td class="style1">
-									
+									 <asp:Label ID="Label2" runat="server" Text='<%# Eval("Money_Time") %>'></asp:Label>
 								</td>
 							</tr>
                             </ItemTemplate>

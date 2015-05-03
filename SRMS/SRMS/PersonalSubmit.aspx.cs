@@ -29,7 +29,7 @@ namespace SRMS
             ps.PrjPerson = Project_PersonLiable.Text.ToString();
             ps.PrjInstitute = "11";
             ps.PrjNature = Project_Nature.Text.ToString();
-            ps.PrjStatus = "在研";
+            ps.PrjStatus = "待审";
             ps.PrjSource = Project_Source.Text.ToString();
             ps.PrjStartTime = Project_StartTime.Text.ToString();
             ps.PrjPlanTime = Project_PlanTime.Text.ToString();

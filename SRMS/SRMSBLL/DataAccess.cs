@@ -43,5 +43,17 @@ namespace SRMSBLL
             string className = assemblyName + "." + db + "Money";
             return (IMoney)Assembly.Load(assemblyName).CreateInstance(className);
         }
+
+        public static IClose CreateIClose()
+        {
+            string className = assemblyName + "." + db + "Close";
+            return (IClose)Assembly.Load(assemblyName).CreateInstance(className);
+        }
+
+        public static IResult CreateIResult()
+        {
+            string className = assemblyName + "." + db + "Result";
+            return (IResult)Assembly.Load(assemblyName).CreateInstance(className);
+        }
     }
 }

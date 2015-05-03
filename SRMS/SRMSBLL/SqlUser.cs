@@ -15,6 +15,7 @@ namespace SRMSBLL
         private SqlDataBase db;
         private string sqlString;
         private DataSet ds;
+        private DataRow dr;
         private UserBean user;
         public SqlUser()
         {
@@ -34,6 +35,54 @@ namespace SRMSBLL
             {
                 return false;
             }
+        }
+        public bool checkUserName(string userID)
+        {
+            sqlString = "select * from tbl_Users where User_ID='" + userID +  "'";
+            dr = db.GetDataRow(sqlString);
+            if (dr != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        public bool checkNewPsw(string newPassword, string newPassword2)
+        {
+            if (newPassword.Equals(newPassword2))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool uodatePassword(string userID, string newPassword)
+        {
+            sqlString = "update tbl_Users set User_Password='" + newPassword + "' where User_ID='" + userID + "'";
+            if (db.ExecuteSQL(sqlString) != -1)
+            {
+                return true;
+            }
+            return false;
+        }
+        public string checkAuthority(string userID)
+        {
+            sqlString = "select User_Authority from tbl_Users where User_ID='" + userID + "'";
+            dr = db.GetDataRow(sqlString);
+            if (dr != null)
+            {
+                return dr[0].ToString();
+            }
+            else
+            {
+                return null;
+            }
+
         }
         public UserBean getUser(String userID)
         {

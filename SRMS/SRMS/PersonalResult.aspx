@@ -19,29 +19,33 @@
 						<table class="table  table-bordered " align="center">
 						  <thead>
 							  <tr>
-								  <th align=center>项目编号</th>
-								  <th>项目题目</th>
-								  <th>发布日期</th>
-								  <th>详细内容</th>
-								  <th>申报项目</th>
+								  <th>项目编号</th>
+								  <th>项目名称</th>
+								  <th>负责人</th>
+								  <th>成果申报</th>
+                                  <th>成果详情</th>
 							  </tr>
 						  </thead>   
 						  <tbody>
 							<asp:Repeater ID="Repeater1" runat="server">
                                   <ItemTemplate>  
-                                   <tr>
+                                  <tr>
 								<td class="style1">
-                                    <asp:Label ID="News_ID" runat="server" Text='<%# Eval("News_ID") %>'>></asp:Label></td>
+                                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Project_ID") %>'></asp:Label>
+                                    </td>
+							    <td class="style1">
+                                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("Project_Name") %>'></asp:Label>
+                                    </td>
 								<td class="style1">
-                                    <asp:Label ID="News_Name" runat="server" Text='<%# Eval("News_Name") %>'></asp:Label></td>
+                                     <asp:Label ID="Project_PersonLiable" runat="server" Text='<%# Eval("Project_PersonLiable") %>'></asp:Label>
+                                    </td>
+                               <td class="style1">
+                                    <a class="label label-success" href="PersonalRsSubmit.aspx?id=<%# Eval("Project_ID") %>">申报</a>
+                                    
+                                    </td>
 								<td class="style1">
-                                    <asp:Label ID="News_Time" runat="server" Text='<%# Eval("News_Time") %>'></asp:Label></td>
-								<td class="style1">
-									<span class="label label-success">详细内容</span>
-								</td>
-								<td class="style1">
-									申报
-								</td>
+                                <a href="PersonalRsDetail.aspx?id=<%# Eval("Project_ID") %>">详情</a>
+                                    </td>
 							</tr>
                             </ItemTemplate>
                             <FooterTemplate>

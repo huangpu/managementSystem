@@ -215,11 +215,19 @@
     <Content Include="js\modernizr.js" />
     <Content Include="js\retina.js" />
     <Content Include="Login.aspx" />
+    <Content Include="ManagerAlterPw.aspx" />
+    <Content Include="ManagerIndex.aspx" />
+    <Content Include="ManagerNsDetail.aspx" />
+    <Content Include="ManagerWait.aspx" />
+    <Content Include="ManagerWaitDetail.aspx" />
+    <Content Include="PersonalAlterPw.aspx" />
     <Content Include="PersonalClose.aspx" />
     <Content Include="PersonalCsDetail.aspx" />
     <Content Include="PersonalIndex.aspx" />
     <Content Include="PersonalInfor.aspx" />
     <Content Include="PersonalMnyEdit.aspx" />
+    <Content Include="PersonalRsDetail.aspx" />
+    <Content Include="PersonalRsSubmit.aspx" />
     <Content Include="PersonalUnDetail.aspx" />
     <Content Include="PersonalUnInter.aspx" />
     <Content Include="PersonalMnyDetail.aspx" />
@@ -269,12 +277,54 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ManagerAlterPw.aspx.cs">
+      <DependentUpon>ManagerAlterPw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagerAlterPw.aspx.designer.cs">
+      <DependentUpon>ManagerAlterPw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerIndex.aspx.cs">
+      <DependentUpon>ManagerIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagerIndex.aspx.designer.cs">
+      <DependentUpon>ManagerIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerNsDetail.aspx.cs">
+      <DependentUpon>ManagerNsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagerNsDetail.aspx.designer.cs">
+      <DependentUpon>ManagerNsDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ManagerRoot.Master.cs">
       <DependentUpon>ManagerRoot.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ManagerRoot.Master.designer.cs">
       <DependentUpon>ManagerRoot.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerWait.aspx.cs">
+      <DependentUpon>ManagerWait.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagerWait.aspx.designer.cs">
+      <DependentUpon>ManagerWait.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerWaitDetail.aspx.cs">
+      <DependentUpon>ManagerWaitDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagerWaitDetail.aspx.designer.cs">
+      <DependentUpon>ManagerWaitDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalAlterPw.aspx.cs">
+      <DependentUpon>PersonalAlterPw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalAlterPw.aspx.designer.cs">
+      <DependentUpon>PersonalAlterPw.aspx</DependentUpon>
     </Compile>
     <Compile Include="PersonalClose.aspx.cs">
       <DependentUpon>PersonalClose.aspx</DependentUpon>
@@ -310,6 +360,20 @@
     </Compile>
     <Compile Include="PersonalMnyEdit.aspx.designer.cs">
       <DependentUpon>PersonalMnyEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalRsDetail.aspx.cs">
+      <DependentUpon>PersonalRsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalRsDetail.aspx.designer.cs">
+      <DependentUpon>PersonalRsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalRsSubmit.aspx.cs">
+      <DependentUpon>PersonalRsSubmit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalRsSubmit.aspx.designer.cs">
+      <DependentUpon>PersonalRsSubmit.aspx</DependentUpon>
     </Compile>
     <Compile Include="PersonalUnDetail.aspx.cs">
       <DependentUpon>PersonalUnDetail.aspx</DependentUpon>
@@ -432,7 +496,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49201</DevelopmentServerPort>
+          <DevelopmentServerPort>50671</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

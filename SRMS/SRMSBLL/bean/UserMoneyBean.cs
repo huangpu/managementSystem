@@ -5,9 +5,10 @@ using System.Text;
 
 namespace SRMSBLL
 {
-    class UserMoneyBean
+    public class UserMoneyBean
     {
         private string prjID;
+        private string prjName;
         private double moneyTot;
         private double moneyUse;
         private double moneySurplus;
@@ -55,6 +56,12 @@ namespace SRMSBLL
         {
             get { return moneyCrUse; }
             set { moneyCrUse = value; }
+        }
+
+        public string PrjName
+        {
+            get { return prjName; }
+            set { prjName = value; }
         }
     }
 }

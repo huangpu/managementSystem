@@ -1,48 +1,71 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PersonalRoot.Master" AutoEventWireup="true" CodeBehind="PersonalClose.aspx.cs" Inherits="SRMS.PersonalClose" %>
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 <a href="#">项目结项</a>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<asp:ScriptManager ID="ScriptManager1" runat="server">
+ <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
    <div class="row-fluid sortable">		
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2>项目结项</h2>
-						
+						<h2><i class="halflings-icon user"></i>项目结项</h2>
+						<div class="box-icon">
+							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
+							<a href="#" class="btn-minimize"><i >h</i></a>
+							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
+						</div>
 					</div>
 					<div class="box-content">
 						<table class="table  table-bordered " align="center">
 						  <thead>
 							  <tr>
-								  <th align=center>项目名称</th>
-								  <th>负责人</th>								  
-								  <th>立项日期</th>	
-                                  <th>结项期限</th>							                         
+								  <th>项目编号</th>
+								  <th>项目名称</th>
+								  <th>负责人</th>
+                                  <th>立项日期</th>
+								  <th>结项期限</th>
                                   <th>操作</th>
 							  </tr>
 						  </thead>   
 						  <tbody>
-							
+							<asp:Repeater ID="Repeater1" runat="server">
+                                  <ItemTemplate>  
                                    <tr>
-                                <td class="style1">
-                                    <asp:Label ID="News_ID" runat="server" Text=' test'></asp:Label></td>
 								<td class="style1">
-                                    <asp:Label ID="News_Name" runat="server" Text=' test'></asp:Label></td>
+                               <asp:Label ID="Label1" runat="server" Text='<%# Eval("Project_ID") %>'></asp:Label>
+                                    </td>
+							    <td class="style1">
+                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("Project_Name") %>'></asp:Label>
+                                    </td>
 								<td class="style1">
-                                    <asp:Label ID="News_Time" runat="server" Text=' 2015/4/5'></asp:Label></td>
+                                <asp:Label ID="Project_PersonLiable" runat="server" Text='<%# Eval("Project_PersonLiable") %>'></asp:Label>
+                                    </td>
+                               <td class="style1">
+                               <asp:Label ID="Label3" runat="server" Text='<%# Eval("Project_StartTime") %>'></asp:Label>
+                               </td>
+                               <td class="style1">
+                               <asp:Label ID="Label4" runat="server" Text='<%# Eval("Project_PlanTime") %>'></asp:Label>
+                                    </td>
 								<td class="style1">
-									2016/4/5
-								</td>
-								<td class="style1">
-									<a href="PersonalCsDetail.aspx"><span class="label label-success">结项</span></a>
-								</td>
-                                </tr>							
+                               <a href="PersonalCsDetail.aspx?id=<%# Eval("Project_ID") %>"> 结项</a>
+                                    </td>
+							</tr>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                       <tr onmouseover="this.className='rowHover'" onmouseout="this.className=''">
+                            <td colspan="11" class="row" align="center">
+                                <asp:Label ID="LblEmpty" runat="server" Text="暂无数据" Visible='<%#bool.Parse((Repeater1.Items.Count==0).ToString())%>'></asp:Label>
+                            </td>
+                        </tr>
+                   </FooterTemplate>
+                             </asp:Repeater>
+							
 						  </tbody>
 					  </table> 
                         <webdiyer:AspNetPager ID="AspNetPager1" runat="server"

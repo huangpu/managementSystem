@@ -13,7 +13,8 @@ namespace SRMSBLL.Interface
                       out int count);
         ProjectSubmitBean getProject(string projectID);
         bool updateProject(ProjectSubmitBean projectSubmit);
-
+        bool updataStatus(string prjID, string status);
+        bool deleteProject(string prJID);
         
     }
 }
